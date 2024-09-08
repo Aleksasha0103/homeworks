@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Регистрация</h1>
+    <form action="script.php" method="POST">
+      <div>
+        <label for="name">Имя</label>
+        <input type="text" placeholder="Имя" id="name" />
+      </div>
+      <div>
+        <label for="surname">Фамилия</label>
+        <input type="text" id="surname" />
+      </div>
+      <div>
+        <label for="login">Придумайте логин</label>
+        <input type="text" id="login" />
+      </div>
+      <fieldset>
+        <legend>Ввод и подтверждение пароля</legend>
+        <div>
+          <label for="password">Придумайте пароль</label>
+          <input type="password" id="password" />
+        </div>
+        <div>
+          <label for="password2">Повторите пароль</label>
+          <input type="password" id="password2" />
+        </div>
+      </fieldset>
+      <div>
+        <label for="phone">Номер мобильного телефона</label>
+        <input type="text" id="phone" />
+      </div>
+      <div>
+        <label for="name">Укажите ваш пол</label><br />
+        Женский <input type="radio" name="sex" /><br />
+        Мужской <input type="radio" name="sex" />
+      </div>
+      <div>
+        <button>Зарегистрироваться</button>
+      </div>
+      <div>
+        Нажимая кнопку «Зарегистрироваться»:
+        <div><input type="checkbox" />Я принимаю условия <a href="...">Пользовательского соглашения</a></div>
+      </div>
+    </form>
+  </body>
+</html>

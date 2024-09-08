@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article>
+      <h1>Опрос для владельцев магических животных</h1>
+      <form method="post">
+        <fieldset>
+          <legend>Информация о питомце</legend>
+          <div>
+            <label for="pet-name">Кличка животного (если не 1, то через запятую): </label>
+            <input type="text" name="pet-name" id="pet-name" placeholder="Введите кличку питомца" required />
+          </div>
+          <br />
+          <div>
+            <label for="race">Выберите породу:</label><br />
+            <select name="race" id="race" multiple required>
+              <option value="">Можно выбрать несколько, если не 1 питомец (зажмите Shift)</option>
+              <option value="learned-cat">Кот учёный</option>
+              <option value="gentle-hell-hound">Нежный цербер</option>
+              <option value="firebird">Жар-птица</option>
+              <option value="goldfish">Золотая рыбка</option>
+            </select>
+          </div>
+          <br />
+
+          <div>
+            <p>Чем питается ваш любимец?</p>
+            <label for="silver-dew"
+              ><input
+                type="checkbox"
+                name="food"
+                id="silver-dew"
+                value="silver-dew"
+                checked="checked"
+                required
+              />Серебряная роса</label
+            ><br />
+            <label for="golden-seeds"
+              ><input type="checkbox" name="food" id="golden-seeds" value="golden-seeds" required />Золотые
+              семена</label
+            ><br />
+            <label for="air"><input type="checkbox" name="food" id="air" value="air" required />Эфир</label><br />
+            <label for="blossom-dust"
+              ><input type="checkbox" name="food" id="blossom-dust" value="blossom-dust" required />Цветочная
+              пыльца</label
+            ><br />
+          </div>
+          <br />
+          <div>
+            Укажите пол вашего питомца:<br />
+            <label for="male"><input type="radio" name="gender" id="male" value="male" />Мальчик</label>
+            <label for="female"><input type="radio" name="gender" id="female" value="female" />Девочка</label>
+            <label for="both"
+              ><input type="radio" name="gender" id="both" value="both" />Несколько разнополых питомцев</label
+            >
+          </div>
+          <br />
+          <div>
+            <label for="comment">Комментарий о важных особенностях:</label><br />
+            <textarea
+              name="comment"
+              id="comment"
+              cols="50"
+              rows="5"
+              placeholder="Если есть важные особенности, которые нужно знать, укажите их, пожалуйста."
+              required
+            ></textarea>
+          </div>
+          <br />
+          <div>
+            <label for="photo">Прикрепите фото питомца:</label>
+            <input type="file" name="photo" id="photo" />
+          </div>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Информация о владельце</legend>
+          <div>
+            <label for="user-name">Ваше имя: </label>
+            <input type="text" name="user-name" id="user-name" placeholder="Введите ваше имя" required />
+          </div>
+          <br />
+          <div>
+            <label for="contacts">Ваши контактные данные:</label>
+            <input type="text" name="contacts" id="contacts" placeholder="Введите контакты" required />
+          </div>
+        </fieldset>
+        <br />
+        <input type="submit" value="Сохранить" />
+      </form>
+    </article>
+  </body>
+</html>

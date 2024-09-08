@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div><input type="text"></div>
+<div><input type="file"></div>
+<div><input type="date"></div>
+<div><input type="checkbox"></div>
+<div><input type="password"></div>
+<div><textarea rows="10"></textarea></div>
+<div><select>
+    <option value="1">пункт 1</option>
+    <option value="2">пункт 2</option>
+    <option value="3">пункт 3</option>
+</select></div>
+<div><label for="name">Имя: </label><input type="text" placeholder="Ф. И. О." id="name"></div>
+<div><label for="userEmail">Эл. почта: </label><input type="email" placeholder="E-mail" id="userEmail"></div>
+<div><label for="search">Поиск: </label><input type="search" placeholder="Введите запрос" id="search"></div>
+<div><label for="tel">Телефон: </label><input type="tel" placeholder="+7 (...) ...-..-.." id="tel"></div>
+<div><label for="website">Сайт: </label><input type="url" placeholder="https://example.com" id="website"></div>
+<div><label for="password">Пароль (до 5 символов): </label><input type="password" maxlength="5" placeholder="Введите пароль" id="password"></div>
+<div><label for="age">Возраст: </label><input type="number" placeholder="Введите свой возраст" id="age" max="110" min="5"></div>
+<form><p>Как вы относитесь к полётам в космос?</p>
+    <input type="checkbox" name="space" value="1" checked="checked">Положительно, всегда хотел полететь в космос<br>
+    <input type="checkbox" name="space" value="2">Безразлично, никогда не думал об этом серьёзно<br>
+    <input type="checkbox" name="space" value="3">Отрицательно, меня с детства отталкивают мысли о космосе
+</form>
+<form>
+    <fieldset><legend>Радиокнопки:</legend>
+    <label for="ie"><input type="radio" name="browser" value="Internet Explorer" id="ie">Вариант 1</label>
+    <label for="opera"><input type="radio" name="browser" value="Opera" id="opera">Вариант 2</label>
+    <label for="firefox"><input type="radio" name="browser" value="Firefox" id="firefox">Вариант 3</label>
+    </fieldset>
+</form>
+<form>
+    <div><label for="avatar">Выберите фотографию: </label>
+        <input type="file" id="avatar" name="avatar">
+    </div>
+</form>
+<form>
+    <label for="testtext"></label>
+    <div><input type="text" id="testtext" placeholder="Введите любой текст"></div>
+    <div><input type="submit" value="Отправка"></div>
+    <div><input type="reset" value="Очистка"></div>
+</form>
+<form>
+<label for="comment">    
+Большое текстовое поле:<br>
+<textarea name="comment" id="comment" cols="20" rows="2"></textarea>
+</label>
+</form>
+<form>
+    <label for="city-select">Ваш город: </label>
+    <select name="city" id="city-select" multiple>
+        <option value="">Выберите город</option>
+        <option value="petersburg">Санкт-Петербург</option>
+        <option value="samara">Самара</option>
+        <option value="perm">Пермь</option>
+        <option value="novosibirsk" selected="selected">Новосибирск</option>
+    </select>
+</form>
+<form>
+    <button type="submit">Принять</button>
+</form>
+<form>
+    <button type="button">Просто кнопка</button>
+</form>
+<form>
+    <fieldset>
+        <legend accesskey="N" tabindex="0">Имя</legend>
+        <p>Имя <input type="text" name="firstName" accesskey="F" tabindex="1"></p>
+    </fieldset>
+    <fieldset>
+        <legend accesskey="A" tabindex="2">Адрес</legend>
+        <p>Адрес <textarea name="address" accesskey="T" tabindex="3"></textarea></p>
+    </fieldset>
+</form>
+<form action="#" method="get"></form>
+<iframe height="600" width="1000" allowfullscreen src="https://www.youtube.com/embed/jpmJC4qBILs?si=y2rhClTHlYBKc1nK"></iframe>
+<video controls muted loop height="600" width="1000" poster="/" src="Клип.mp4"></video>
+
+</body>
+</html>

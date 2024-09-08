@@ -1,0 +1,63 @@
+h1,
+h2 {
+  font-family: sans-serif;
+}
+
+section {
+  margin: 4em;
+}
+
+figcaption {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 1em;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+figure {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 300px;
+  align-content: center;
+  margin: 1em;
+  padding: 1em;
+  object-fit: contain;
+}
+
+.div-film {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 200px;
+  align-content: center;
+  margin: 1em;
+  padding: 1em;
+  object-fit: contain;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  align-content: center;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+a {
+  text-decoration: none;
+}
+
+iframe {
+  width: 250px;
+  height: 200px;
+}
