@@ -10,6 +10,12 @@
   src: url(/fonts/Roboto-Italic.ttf);
 }
 
+@font-face {
+  font-family: "Jost, sans-serif";
+  font-style: normal;
+  src: url(/fonts/static/Jost-Regular.ttf);
+}
+
 .border-header {
   height: 16px;
   background-color: #ffffef;
@@ -271,4 +277,96 @@ h3 {
   text-align: center;
   width: 1093px;
   margin-top: 11px;
+}
+
+.grid-img-text-block {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0em 1em;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  background-color: #ffffef;
+  margin: 24px 40px;
+}
+
+.img-from-div-img-text-block1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.text-from-div-img-text-block1 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 347px;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Roboto, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 29px;
+  color: #56593d;
+  text-align: center;
+}
+
+.line {
+  width: 40px;
+  border: 1px solid #717353;
+  margin-top: 32px;
+  margin-bottom: 33px;
+  justify-items: center;
+}
+
+.text {
+  font-family: "Jost, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32.4px;
+  color: #56593d;
+  text-align: center;
+}
+
+.img-from-div-img-text-block2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.text-from-div-img-text-block2 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 344px;
+  text-align: center;
+}
+
+footer {
+  height: 253px;
+  background-color: #717353;
+  align-content: center;
+}
+
+.footer-text {
+  font-family: "Roboto, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25.2px;
+  color: #ffffef;
+  text-align: center;
+}
+
+footer a {
+  font-family: "Roboto, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25.2px;
+  color: #ffffef;
+  text-align: center;
+  text-decoration: none;
 }
