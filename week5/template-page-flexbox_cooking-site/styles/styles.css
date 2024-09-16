@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Open Sans, sans-serif";
   font-style: normal;
-  src: url(/template-page-flexbox_cooking-site/fonts/static/OpenSans-Regular.ttf);
+  src: url(/fonts/static/OpenSans-Regular.ttf);
 }
 
 html {
@@ -14,24 +14,10 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
-  box-sizing: border-box;
-  width: 1110px;
-  margin: 0 auto;
   align-items: center;
-}
-
-main {
-  margin-top: 30px;
-  justify-content: center;
-}
-
-footer {
-  align-items: flex-start;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 13px;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 nav {
@@ -49,12 +35,106 @@ ul {
 
 nav li {
   list-style: none;
-  padding: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans, sans-serif";
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.1rem;
   color: #373739;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  line-height: 150%;
+  color: #373739;
+}
+
+a {
+  text-decoration: none;
+  color: #373739;
+}
+
+main {
+  margin-top: 1.8rem;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+  background-color: #fff9e3;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+aside {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 20%;
+  height: auto;
+  background-color: #ddeccb;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.9rem;
+  color: #373739;
+  text-align: center;
+  margin-bottom: 3.1rem;
+}
+
+.text-block-main {
+  display: block;
+  text-align: center;
+  width: 95%;
+}
+
+.two-blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin-top: 1rem;
+}
+
+.block1,
+.block2,
+.block3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 45%;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #feeab8;
+}
+
+.block3 {
+  width: 95%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  align-items: flex-start;
+  margin-top: 1.8rem;
 }
 
 .menu-footer ul {
@@ -66,98 +146,21 @@ nav li {
 
 .menu-footer li {
   list-style: none;
-  padding: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans, sans-serif";
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 0.8rem;
   color: #373739;
+  padding: 0.6rem;
+  box-sizing: border-box;
 }
 
+footer p,
 a {
-  text-decoration: none;
-  color: #373739;
-  font-weight: normal;
-  font-size: 17px;
+  font-size: 0.8rem;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 160%;
-  color: #373739;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 80%;
-  background-color: #fff9e3;
-  padding: 1em;
-  margin: 0px;
-  box-sizing: border-box;
-}
-
-aside {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.footer-logo {
   display: block;
-  box-sizing: border-box;
-  width: 19%;
-  height: 100%;
-  background-color: #ddeccb;
-  padding: 6em 1em 6em 1em;
-  margin: 0px;
-  text-align: center;
-}
-
-h1 {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 140%;
-  color: #373739;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.text-block-main {
-  display: block;
-  text-align: center;
-  padding: 0px 3em 0px 3em;
-}
-
-.two-blocks {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.block1,
-.block2,
-.block3 {
-  display: flex;
-  display: block;
-  box-sizing: border-box;
-  width: 40%;
-  margin: 1em 0px 1em 0px;
-  padding: 1em;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #feeab8;
-}
-
-.block3 {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2em;
+  width: 20%;
 }
