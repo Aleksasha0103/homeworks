@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Open Sans, sans-serif";
   font-style: normal;
-  src: url(/template-page-flexbox/fonts/static/OpenSans-Regular.ttf);
+  src: url(/fonts/static/OpenSans-Regular.ttf);
 }
 
 header {
