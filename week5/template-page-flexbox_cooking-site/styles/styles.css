@@ -33,7 +33,7 @@ ul {
   justify-content: space-between;
 }
 
-nav li {
+header li {
   list-style: none;
   font-family: "Open Sans, sans-serif";
   font-style: normal;
@@ -44,17 +44,18 @@ nav li {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #373739;
+  font-size: 1.1rem;
+}
+
 p {
   font-family: "Open Sans, sans-serif";
   font-style: normal;
   font-weight: normal;
   font-size: 1.1rem;
   line-height: 150%;
-  color: #373739;
-}
-
-a {
-  text-decoration: none;
   color: #373739;
 }
 
@@ -80,8 +81,9 @@ aside {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  align-items: center;
+  align-self: stretch;
   width: 20%;
-  height: auto;
   background-color: #ddeccb;
   padding: 1rem;
   box-sizing: border-box;
@@ -91,7 +93,7 @@ h1 {
   font-family: "Open Sans, sans-serif";
   font-style: normal;
   font-weight: normal;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   color: #373739;
   text-align: center;
   margin-bottom: 3.1rem;
@@ -110,7 +112,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .block1,
@@ -130,6 +132,7 @@ h1 {
   width: 95%;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  padding: 2rem;
 }
 
 footer {
@@ -137,14 +140,14 @@ footer {
   margin-top: 1.8rem;
 }
 
-.menu-footer ul {
+footer ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.menu-footer li {
+footer li {
   list-style: none;
   font-family: "Open Sans, sans-serif";
   font-style: normal;
@@ -155,8 +158,13 @@ footer {
   box-sizing: border-box;
 }
 
-footer p,
-a {
+footer p {
+  font-size: 0.8rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #373739;
   font-size: 0.8rem;
 }
 
