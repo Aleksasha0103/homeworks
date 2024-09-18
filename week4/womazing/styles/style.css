@@ -16,14 +16,69 @@
   font-weight: normal;
 }
 
-.wrapper {
-  margin: 0 auto;
-  width: 80%;
-  height: 100%;
+.first-screen-photos {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+  width: 39rem;
+  height: 52rem;
+  top: 0;
+  right: 0;
+  background-color: #f1eadc;
+}
+
+#photo_1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: absolute;
+  z-index: 2;
+  object-fit: none;
+  margin: 0;
+  padding: 0;
+  top: 7.5rem;
+  left: 3rem;
+}
+
+#photo_2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: absolute;
+  z-index: 1;
+  object-fit: none;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: -5rem;
+}
+
+#photo_3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: absolute;
+  z-index: 1;
+  object-fit: none;
+  margin: 0;
+  padding: 0;
+  top: 15rem;
+  left: 23rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-items: center;
+  align-content: space-between;
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
 }
 
 header {
@@ -32,7 +87,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 2.8rem 0rem;
+  width: 100%;
 }
 
 #logo-header {
@@ -46,7 +101,6 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: transparent;
 }
 
 .nav-header li {
@@ -55,7 +109,7 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 2.8rem;
+  padding: 1.4rem;
   box-sizing: border-box;
   font-family: "Raleway, sans-serif";
   font-weight: normal;
@@ -82,12 +136,13 @@ img {
   justify-content: space-between;
 }
 
-.div-both {
+main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
 }
 
 .first-screen-texts {
@@ -95,6 +150,20 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
   width: 34rem;
+  height: 31rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12rem 0rem;
+}
+
+.first-screen-texts p {
+  display: flex;
+  width: 24.5rem;
+  font-family: "Raleway, sans-serif";
+  font-weight: normal;
+  font-size: 1.25rem;
+  text-align: right;
+  line-height: 140%;
 }
 
 h1 {
@@ -106,17 +175,6 @@ h1 {
   margin: 0rem;
 }
 
-.first-screen-texts p {
-  display: block;
-  width: 24rem;
-  height: 5rem;
-  font-family: "Raleway, sans-serif";
-  font-weight: normal;
-  font-size: 1.25rem;
-  text-align: right;
-  line-height: 140%;
-}
-
 p {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
@@ -125,73 +183,43 @@ p {
   line-height: 140%;
 }
 
-.div-btn {
-  width: 19rem;
-  height: 4.25rem;
-  text-align: right;
+header p {
+  margin-right: 4.2rem;
 }
 
 .btn-first-screen {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  align-self: center;
   width: 15rem;
   height: 4.25rem;
   background-color: #6e9c9f;
-  border: 0px;
+  border: 0rem;
+  padding: 0rem 1rem 0rem 0rem;
+  box-sizing: border-box;
   color: #ffffff;
   font-family: "Raleway, sans-serif";
   font-weight: normal;
   font-size: 1.1rem;
   text-align: center;
-  line-height: 138.9%;
+  position: relative;
+  z-index: 0;
 }
 
-/*.btn-first-screen::before {
-  content: url("/womazing/images/");
-  align-content: left;
-  margin: 0px;
-}*/
+.btn-first-screen_icon {
+  padding: 0rem;
+  margin: 0rem;
+  position: relative;
+  z-index: 2;
+}
 
 #slider-navigation {
-  margin-top: 112px;
-  margin-right: 163px;
-  text-align: right;
-}
-
-.first-screen-photos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#photo_3 {
-  position: absolute;
-  margin-top: 123px;
-  margin-left: 448px;
-  width: 197px;
-  height: 197px;
-}
-
-#photo_2 {
-  position: absolute;
-  margin-top: 388px;
-  margin-left: 0px;
-  width: 190px;
-  height: 318px;
-}
-
-#photo_1 {
-  position: absolute;
-  margin-top: 0px;
-  margin-left: 130px;
-  width: 410px;
-  height: 646px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 1110px;
-  margin: 0 auto;
+  align-self: center;
+  padding: 0;
+  margin: 4.6rem 0rem 0rem 8.1rem;
 }
 
 h2 {
@@ -200,15 +228,14 @@ h2 {
   font-size: 40px;
   text-align: left;
   line-height: 110%;
-  margin: 130px 0px 92px 0px;
 }
 
 .div-h2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 1110px;
   justify-content: space-between;
+  margin-top: 8rem;
 }
 
 .catalog-photos {
@@ -216,142 +243,191 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 65px;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
 }
 
 .photo-in-catalog {
-  width: 350px;
-  height: 478px;
-  margin-left: 0px;
-  padding: 0px;
-  border: 0px;
+  width: 21.8rem;
+  height: 29.8rem;
+  margin: 0rem;
+  padding: 0rem;
+  border: 0rem;
+  object-fit: cover;
+  text-align: center;
+  position: relative;
 }
 
-/*
-.photo-in-catalog::before {
-  content: icon;
-  src: url(/images/icon_catalog-arrow.svg);
-  align-content: center;
-  vertical-align: middle;
-  background-color: #6e9c9f;
-  opacity: 36%;
+.photo-in-catalog:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(/images/icon_catalog-arrow.svg) no-repeat center center;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.4s ease;
 }
-  */
+
+.photo-in-catalog:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #6e9c9f;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+
+.photo-in-catalog:hover:before,
+.photo-in-catalog:hover:after {
+  opacity: 1;
+}
 
 .clothes-name {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-align: center;
   line-height: 140%;
-  margin-top: 24px;
-  margin-bottom: 7px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .clothes-price {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 15px;
+  font-size: 0.9rem;
   text-align: center;
   line-height: 140%;
   color: #998e78;
 }
 
+.for-bth-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
 .btn-catalog {
-  width: 243px;
-  height: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 15.2rem;
+  height: 4.25rem;
   background-color: #ffffff;
   border: 1px solid #6e9c9f;
   color: #6e9c9f;
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.1rem;
   text-align: center;
   line-height: 138.9%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.for-bth-catalog {
+.blocks-wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  width: inherit;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  margin-top: 8rem;
 }
 
 .what-important {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  display: block;
-  width: 350px;
-  height: 272px;
-  border: 0px;
+  align-content: center;
+  width: 22rem;
+  height: 17rem;
+  border: 0rem;
   text-align: left;
 }
 
 .icon {
-  width: 61px;
-  height: 61px;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
+  width: 3.8rem;
+  height: 3.8rem;
+  margin: 0rem;
+  padding: 0rem;
+  border: 0rem;
   text-align: left;
 }
 
 .h3 {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 25px;
+  font-size: 1.6rem;
   text-align: left;
   vertical-align: top;
   line-height: 140%;
-  margin-bottom: 24px;
-  margin-top: 37px;
+  margin-bottom: 1.5rem;
+  margin-top: 2.3rem;
 }
 
 .text-important {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.1rem;
   text-align: left;
   vertical-align: top;
   line-height: 140%;
-  width: 300px;
-  height: 115px;
+  width: 18.8rem;
+  height: 7.2rem;
 }
 
 .div-main-command {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 1110px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 6rem;
 }
 
 .command {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  width: 255px;
-  height: 370px;
-  margin-left: 124px;
+  flex-direction: row;
+  justify-content: left;
+  align-content: space-between;
+  width: 16rem;
+  height: 20rem;
   padding: 0;
 }
 
 .photo-command {
-  width: 729px;
-  height: 487px;
-  text-align: center;
+  width: 46rem;
+  height: 30rem;
+  text-align: left;
+  object-fit: cover;
   margin: 0;
   padding: 0;
+}
+
+.div-main-command-icon {
+  object-fit: none;
 }
 
 .h3-command {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 25px;
+  font-size: 1.6rem;
   text-align: left;
   line-height: 140%;
 }
@@ -359,10 +435,9 @@ h2 {
 .text-command {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1rem;
   text-align: left;
   line-height: 140%;
-  margin-bottom: 1em;
 }
 
 footer {
@@ -370,15 +445,31 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #f1eadc;
-  margin-top: 130px;
+  margin-top: 8rem;
 }
 
 .footer-content-zone {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 1110px;
+  width: 70%;
   margin: 0 auto;
+}
+
+.footer-main-part,
+.footer-second-part {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 6.3rem;
+}
+
+.footer-second-part {
+  margin-top: 0.6rem;
+  margin-bottom: 6.3rem;
 }
 
 #logo-footer {
@@ -386,18 +477,21 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: left;
-  margin: 101px 146px 0px 0px;
-  height: 25px;
-  width: 139px;
+  height: 1.5rem;
+  width: 8rem;
+}
+
+#logo-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .menu-footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: transparent;
   justify-content: space-between;
-  margin: 104px 267px 39px 0px;
 }
 
 .menu-footer ul {
@@ -405,21 +499,20 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 400px;
-  height: 21px;
 }
 
 .menu-footer li {
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  display: inline-block;
+  padding: 1.4rem;
+  box-sizing: border-box;
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 15px;
-  text-align: left;
+  font-size: 0.9rem;
+  text-align: center;
   line-height: 140%;
 }
 
@@ -428,7 +521,6 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: right;
-  margin: -70px 0px 103px 490px;
 }
 
 .icons-footer {
@@ -436,13 +528,13 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: right;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
 }
 
 .footer-icon {
-  margin-left: 12px;
-  margin-right: 0px;
+  margin-left: 0.7rem;
+  margin-right: 0rem;
 }
 
 .visa {
@@ -450,11 +542,11 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: right;
-  margin-right: 0px;
+  margin-right: 0rem;
 }
 
 #visa {
-  margin-right: 0px;
+  margin-right: 0rem;
 }
 
 #copyright {
@@ -462,17 +554,16 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: left;
-  position: static;
-  margin-top: 70px;
+  margin-top: 4.4rem;
 }
 
 .copyright {
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 13px;
+  font-size: 0.8rem;
   text-align: left;
   line-height: 140%;
-  margin-bottom: 1em;
+  margin-bottom: 0.3rem;
 }
 
 .clothes-items-footer {
@@ -480,18 +571,20 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  display: block;
-  position: static;
-  margin-top: 39px;
-  margin-left: 188px;
+  margin-top: 2.4rem;
 }
 
 .clothes-items-footer li {
   list-style-type: none;
   font-family: "Raleway, sans-serif";
   font-weight: normal;
-  font-size: 13px;
+  font-size: 0.8rem;
   text-align: left;
-  line-height: 140%;
   margin-bottom: 1em;
+}
+
+.clothes-items-footer a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.8rem;
 }
