@@ -6,7 +6,7 @@
     <title>Анна Романова</title>
     <meta name="description" content="Анна Романова - известный блогер, путешественник, писатель." />
     <meta name="keywords" content="анна романова, известный блогер, путешественник, писатель" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="shortcut icon" href="/icon-plane.svg" type="image/svg" />
   </head>
 
@@ -14,13 +14,15 @@
     <header>
       <div class="div-nav">
         <nav class="header-menu">
-          <p class="p-white-header"><a class="a-contacts" href="#about">Обо мне</a></p>
-          <p class="p-white-header"><a class="a-contacts" href="#projects">Мои проекты</a></p>
-          <p class="p-white-header"><a class="a-contacts" href="#news">Новости</a></p>
+          <ul class="ul-white-header">
+            <li class="li-white-header"><a class="a-contacts" href="#about">Обо мне</a></li>
+            <li class="li-white-header"><a class="a-contacts" href="#projects">Мои проекты</a></li>
+            <li class="li-white-header"><a class="a-contacts" href="#news">Новости</a></li>
+          </ul>
+          <div class="p-white-header" style="width: 80px; height: 80px; margin: 0em 0em 0em 15em; padding: 0em">
+            <a href="/"><img src="/logo.png" alt="Логотип сайта блогера-путешественника Анны Романовой" /></a>
+          </div>
         </nav>
-        <div class="p-white-header" style="width: 100px; height: 100px; margin-left: 15%">
-          <a href="/"><img src="logo.png" alt="Логотип сайта блогера-путешественника Анны Романовой" /></a>
-        </div>
         <div class="div-contacts" style="margin-left: 5%; margin-right: -3%">
           <p class="p-contacts"><a class="a-contacts" href="tel:+70000000000">+7 (000) 000-00-00</a></p>
         </div>
@@ -49,7 +51,7 @@
           <div class="div-card">
             <div class="img-card">
               <a class="a-card" href="/podcast"
-                ><img style="border-radius: 3%" src="travelling.jpg" alt="Подкаст о путешествиях"
+                ><img style="border-radius: 3%" src="/travelling.jpg" alt="Подкаст о путешествиях"
               /></a>
             </div>
             <h3><a class="a-card" href="/podcast">Подкаст о путешествиях</a></h3>
@@ -57,7 +59,7 @@
 
           <div class="div-card">
             <div class="img-card">
-              <a class="a-card" href="/podcast"><img style="border-radius: 3%" src="book.jpg" alt="Новая книга" /></a>
+              <a class="a-card" href="/podcast"><img style="border-radius: 3%" src="/book.jpg" alt="Новая книга" /></a>
             </div>
             <h3><a class="a-card" href="/book">Новая книга</a></h3>
           </div>
@@ -65,7 +67,7 @@
           <div class="div-card">
             <div class="img-card">
               <a class="a-card" href="/marathon"
-                ><img style="border-radius: 3%" src="marathon.jpg" alt="Обучающий марафон"
+                ><img style="border-radius: 3%" src="/marathon.jpg" alt="Обучающий марафон"
               /></a>
             </div>
             <h3><a class="a-card" href="/marathon">Обучающий марафон</a></h3>
@@ -78,7 +80,7 @@
         <div class="div-news-text">
           <img
             style="display: inline-block; width: 500px; height: 500px; margin-right: 2em; border-radius: 3%"
-            src="travelling-abu-dhabi.jpg"
+            src="/travelling-abu-dhabi.jpg"
             alt="Фото Анны Романовой из путешествия в Абу-Даби"
           />
 
@@ -93,11 +95,11 @@
               любой поездки после прохождения марафона.
             </p>
             <p class="p-news">Сейчас цены на марафон – самые приятные, успевайте присоединиться! До встречи! :)</p>
-            <object type="image/gif" style="margin-left: 25%; height: 300px" data="plane.gif"></object>
+            <object type="image/gif" style="margin-left: 25%; height: 300px" data="/plane.gif"></object>
           </div>
           <img
             style="display: inline-block; width: 500px; height: 500px; margin-left: 2em; border-radius: 3%"
-            src="travelling-palermo.jpg"
+            src="/travelling-palermo.jpg"
             alt="Фото Анны Романовой из путешествия в Палермо"
           />
         </div>
@@ -107,9 +109,11 @@
       <div class="div-nav">
         <div>
           <nav>
-            <p class="p-footer-contacts"><a class="a-contacts" href="#about">Обо мне</a></p>
-            <p class="p-footer-contacts"><a class="a-contacts" href="#projects">Мои проекты</a></p>
-            <p class="p-footer-contacts"><a class="a-contacts" href="#news">Новости</a></p>
+            <ul class="ul-white-footer">
+              <li class="li-white-footer"><a class="a-contacts" href="#about">Обо мне</a></li>
+              <li class="li-white-footer"><a class="a-contacts" href="#projects">Мои проекты</a></li>
+              <li class="li-white-footer"><a class="a-contacts" href="#news">Новости</a></li>
+            </ul>
           </nav>
         </div>
         <div class="div-footer-contacts">
@@ -118,10 +122,10 @@
             <a class="a-contacts" href="mailto:annaromanova@mail.ru">annaromanova@mail.ru</a>
           </p>
         </div>
-        <div class="div-copyright">
-          <p class="p-white-footer">&copy; Анна Романова</p>
-          <p class="p-white-footer">2024</p>
-        </div>
+      </div>
+      <div class="div-copyright">
+        <p class="p-white-footer">&copy; Анна Романова</p>
+        <p class="p-white-footer">2024</p>
       </div>
     </footer>
   </body>
