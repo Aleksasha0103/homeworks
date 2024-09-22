@@ -1,0 +1,27 @@
+.container-fluid {
+  background-color: #353a40;
+}
+
+.container-fluid__header {
+  height: 2.8rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container-fluid__footer {
+  height: 4.9rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.nav-link,
+.nav-link__logo-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link__logo-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
