@@ -10,29 +10,29 @@
     <link href="/assets/style.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="container-fluid container-fluid__header">
-      <div class="container text-center">
+    <header class="container-fluid mb-4 rounded-top">
+      <div class="container text-center pl-0 pr-0">
         <div class="row align-items-center">
-          <div class="col-2">
+          <div class="col-2 pl-0 offset-1">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link__logo-link fs-5" href="#">Start Boorstrap</a>
+                <a class="nav-link__logo-link fs-5 fw-semibold text-light" href="#">Start Boorstrap</a>
               </li>
             </ul>
           </div>
-          <div class="col-10">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <div class="col-8 pr-0">
+            <ul class="nav justify-content-end pr-0">
+              <li class="nav-item pr-0">
+                <a class="nav-link active fw-semibold text-light text-end" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+              <li class="nav-item pr-0">
+                <a class="nav-link fw-semibold text-secondary text-end" href="#">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+              <li class="nav-item pr-0">
+                <a class="nav-link fw-semibold text-secondary text-end" href="#">Services</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+              <li class="nav-item pr-0">
+                <a class="nav-link fw-semibold text-secondary text-end" href="#">Contact</a>
               </li>
             </ul>
           </div>
@@ -41,16 +41,99 @@
     </header>
     <main>
       <div class="container">
-        <img src="/Макет страницы для bootstrap.jpg" />
+        <div class="row">
+          <div class="col-10 offset-1 bg-body-secondary mb-4 rounded px-4 py-5 row align-items-center">
+            <h1 class="fw-medium lh-base mt-3">A Warm Welcome!</h1>
+            <p class="fw-normal">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti beatae cumque blanditiis autem totam
+              amet voluptatibus modi eligendi, accusamus nulla illum atque maxime neque obcaecati! Quam corporis atque
+              est vel!
+            </p>
+            <button class="col-2 btn btn-primary btn-lg mb-3" type="button">Call to action!</button>
+          </div>
+        </div>
+      </div>
+      <div class="container p-0">
+        <div class="row justify-content-center">
+          <div
+            class="col-2 px-3 mx-3 main-card-img rounded-top d-flex align-items-center d-flex justify-content-center"
+          >
+            <p class="fw-semibold text-secondary fs-3 text">500 x 325</p>
+          </div>
+          <div
+            class="col-2 px-3 mx-3 main-card-img rounded-top d-flex align-items-center d-flex justify-content-center"
+          >
+            <p class="fw-semibold text-secondary fs-3 text">500 x 325</p>
+          </div>
+          <div
+            class="col-2 px-3 mx-3 main-card-img rounded-top d-flex align-items-center d-flex justify-content-center"
+          >
+            <p class="fw-semibold text-secondary fs-3 text">500 x 325</p>
+          </div>
+          <div
+            class="col-2 px-3 mx-3 main-card-img rounded-top d-flex align-items-center d-flex justify-content-center"
+          >
+            <p class="fw-semibold text-secondary fs-3 text">500 x 325</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-2 px-3 mx-3 main-card-content border border-1">
+            <h2 class="fw-bold text-black text-secondary fs-4 text text-center m-3">Card title</h2>
+            <p class="fw-normal text-center mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+          <div class="col-2 px-3 mx-3 main-card-content border border-1">
+            <h2 class="fw-bold text-black text-secondary fs-4 text text-center m-3">Card title</h2>
+            <p class="fw-normal text-center mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+          <div class="col-2 px-3 mx-3 main-card-content border border-1">
+            <h2 class="fw-bold text-black text-secondary fs-4 text text-center m-3">Card title</h2>
+            <p class="fw-normal text-center mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+          <div class="col-2 px-3 mx-3 main-card-content border border-1">
+            <h2 class="fw-bold text-black text-secondary fs-4 text text-center m-3">Card title</h2>
+            <p class="fw-normal text-center mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div
+            class="col-2 px-3 mx-3 main-card-button border border-1 rounded-bottom bg-body-tertiary mb-4 row align-items-center row justify-content-center"
+          >
+            <button class="col-6 btn btn-primary btn-sm m-2 px-1 py-2" type="button">Find Out More!</button>
+          </div>
+          <div
+            class="col-2 px-3 mx-3 main-card-button border border-1 rounded-bottom bg-body-tertiary mb-4 row align-items-center row justify-content-center"
+          >
+            <button class="col-6 btn btn-primary btn-sm m-2 px-1 py-2" type="button">Find Out More!</button>
+          </div>
+          <div
+            class="col-2 px-3 mx-3 main-card-button border border-1 rounded-bottom bg-body-tertiary mb-4 row align-items-center row justify-content-center"
+          >
+            <button class="col-6 btn btn-primary btn-sm m-2 px-1 py-2" type="button">Find Out More!</button>
+          </div>
+          <div
+            class="col-2 px-3 mx-3 main-card-button border border-1 rounded-bottom bg-body-tertiary mb-4 row align-items-center row justify-content-center"
+          >
+            <button class="col-6 btn btn-primary btn-sm m-2 px-1 py-2" type="button">Find Out More!</button>
+          </div>
+        </div>
       </div>
     </main>
-    <footer class="container-fluid container-fluid__footer">
+    <footer class="container-fluid container-fluid__footer row align-items-end rounded-bottom">
       <div class="container text-center">
-        <div class="row align-items-center">
-          <div class="col">
-        <p class="text-light">Copyright &#169; Your Website 2019</p>
+        <div class="row">
+          <div class="col-10 offset-1">
+            <p class="text-light">Copyright &#169; Your Website 2019</p>
+          </div>
+        </div>
       </div>
-    </div>
     </footer>
     <script src="/assets/bootstrap/bootstrap.bundle.min.js"></script>
   </body>
