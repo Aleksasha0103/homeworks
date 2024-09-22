@@ -1,12 +1,12 @@
 @font-face {
   src: url(/assets/fonts/IntroDemo-BlackInlineCAPS.ttf);
-  font-family: "Intro", sans-serif;
+  font-family: "Intro, sans-serif";
   font-style: normal;
 }
 
 @font-face {
   src: url(/assets/fonts/RobotoSlab-Regular.ttf);
-  font-family: "RobotoSlab", sans-serif;
+  font-family: "RobotoSlab, sans-serif";
   font-style: normal;
 }
 
@@ -32,20 +32,21 @@ footer {
   background-color: #5222d0;
   border: 0px;
   border-radius: 50px;
-  font-family: "Intro", sans-serif;
+  font-family: "Intro, sans-serif";
   font-style: normal;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   justify-items: center;
-  padding: 14px 33px 11px 16px;
-  margin: 0;
+  padding: 14px 14px 11px 16px;
+  margin: 0px 0px 55px 0px;
   box-sizing: border-box;
   position: relative;
   cursor: pointer;
 }
 
 .button__basket {
+  padding: 14px 33px 11px 16px;
   font-size: 0.8rem;
 }
 
@@ -94,7 +95,7 @@ nav {
   flex-wrap: wrap;
   text-decoration: none;
   justify-content: space-between;
-  font-family: "RobotoSlab", sans-serif;
+  font-family: "RobotoSlab, sans-serif";
   font-weight: normal;
   font-size: 1.25rem;
 }
@@ -107,11 +108,17 @@ nav {
   color: #000000;
 }
 
-a {
+.list__main__link {
   text-decoration: none;
+  color: #5222d0;
 }
 
-main {
+.list__inside__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.main-main {
   width: 100%;
   height: 45.6rem;
   display: flex;
@@ -121,7 +128,7 @@ main {
   justify-content: space-between;
 }
 
-section {
+.main-main__section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -136,12 +143,29 @@ aside {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: right;
-  width: calc(1288px-30.7rem);
   margin-top: 4.75rem;
 }
 
-h1 {
-  font-family: "Intro", sans-serif;
+.main-inside,
+.main-inside__section {
+  width: 1288px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0rem;
+  margin: 0 auto 3.1rem;
+}
+
+.main-inside__section {
+  margin: 0rem 0rem 3.1rem 0rem;
+}
+
+h1,
+.h2-title,
+.h2-title_row2,
+.h2-title_subscribe-form {
+  font-family: "Intro, sans-serif";
   font-style: normal;
   font-size: 3.75rem;
   line-height: 120%;
@@ -149,11 +173,72 @@ h1 {
   text-transform: uppercase;
 }
 
-p {
-  font-family: "RobotoSlab", sans-serif;
+.h2-title {
+  font-size: 1.43rem;
+  margin-bottom: 0.6rem;
+}
+
+.h2-title_row2 {
+  font-size: 1.43rem;
+  margin-top: 1.56rem;
+}
+
+.h2-title_subscribe-form {
+  font-size: 1.43rem;
+  color: #ffffff;
+}
+
+p,
+#userEmail {
+  font-family: "RobotoSlab, sans-serif";
   font-style: normal;
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 160%;
   color: #000000;
+}
+
+input {
+  height: 50px;
+  width: 323px;
+  border: 0px;
+  color: #000000;
+  margin: 6px 22px 23px 0px;
+  justify-self: left;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  margin-bottom: 1.56rem;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.cards__item,
+.cards__subscribe-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-content: flex-start;
+  width: 22.8rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.cards__item__img {
+  width: 22.8rem;
+  margin: 0rem 0rem 1.4rem 0rem;
+  padding: 0rem;
+  object-fit: cover;
+}
+
+.cards__subscribe-form {
+  background-color: #ec615b;
+  padding: 1.56rem 0rem 0.37rem 1.25rem;
+  box-sizing: content-box;
 }

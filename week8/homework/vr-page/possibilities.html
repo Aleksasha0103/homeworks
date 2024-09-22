@@ -14,27 +14,72 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="/assets/img/logo.svg" alt="Логотип компании Виарушка" />
+      <a href="/index.html"><img class="logo" src="/assets/img/logo.svg" alt="Логотип компании Виарушка" /></a>
       <button class="button button__basket">Корзина</button>
     </header>
-    <main>
-      <section>
-        <h1>Виртуальная реальность без проводов</h1>
-        <p>
-          Лучшее, что случалось с виртуальным миром в реальности. Новый компактный шлем без проводов и дорогих
-          комьютеров.
-        </p>
-        <button class="button button__buy">Купить</button>
+    <main class="main-inside">
+      <section class="main-inside main-inside__section">
+        <h1>Возможности</h1>
+        <div class="cards">
+          <div class="cards cards__item">
+            <img class="cards__item cards__item__img" src="/assets/img/img-block1.png" alt="Без проводов" />
+            <h2 class="h2-title">Без проводов</h2>
+            <p>
+              Шлем работает без проводов. Не нужен ни компьютер, ни внешнее питание, ни большое помещение, чтобы
+              расставить трекеры.
+            </p>
+          </div>
+
+          <div class="cards cards__item">
+            <img class="cards__item cards__item__img" src="/assets/img/img-block2.png" alt="Без компьютера" />
+            <h2 class="h2-title">Без компьютера</h2>
+            <p>
+              Современным VR-шлемам нужен мощный компьютер, чтобы запускать игры. Наш шлем запускает игры из облака,
+              поэтому просто наслаждайтесь.
+            </p>
+          </div>
+
+          <div class="cards cards__item">
+            <img class="cards__item cards__item__img" src="/assets/img/img-block3.png" alt="До 10 часов работы" />
+            <h2 class="h2-title">До 10 часов работы</h2>
+            <p>
+              Несмотря на компактность и производительность, шлем может работать до 10 часов — даже, если вы играете в
+              самые ресурсоемкие игры.
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="cards cards__item">
+            <h2 class="h2-title_row2">Сотни игр</h2>
+            <p>
+              Уже сейчас вам доступно более сотни игр: от высокобюджетных ААА-тайтлов до маленьких независимых проектов.
+              Скоро их станет еще больше.
+            </p>
+          </div>
+
+          <div class="cards cards__item">
+            <h2 class="h2-title_row2">Почти даром</h2>
+            <p>
+              По сравнению с другими VR-шлемами наш стоит гораздо меньше. И вы существенно экономите на мощном
+              компьютере.
+            </p>
+          </div>
+
+          <div class="cards cards__subscribe-form">
+            <h2 class="h2-title_subscribe-form">Новости</h2>
+            <div><label for="userEmail"></label><input type="email" placeholder="Эл. почта" id="userEmail" /></div>
+            <button class="button">Подписаться</button>
+          </div>
+        </div>
       </section>
-      <aside><img src="/assets/img/img-main-page.png" alt="Виртуальная реальность без проводов" /></aside>
     </main>
     <footer>
       <nav>
-        <ul class="list list list__main">
-          <li><a href="#">Возможности</a></li>
-          <li><a href="#">Где купить</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Помощь</a></li>
+        <ul class="list list list__inside">
+          <li><a class="list__inside__link" href="#">Возможности</a></li>
+          <li><a class="list__inside__link" href="#">Где купить</a></li>
+          <li><a class="list__inside__link" href="#">Доставка</a></li>
+          <li><a class="list__inside__link" href="#">Помощь</a></li>
         </ul>
       </nav>
     </footer>
