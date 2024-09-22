@@ -1,5 +1,5 @@
 @font-face {
-  src: url(/assets/fonts/IntroDemo-BlackInlineCAPS.otf);
+  src: url(/assets/fonts/IntroDemo-BlackInlineCAPS.ttf);
   font-family: "Intro", sans-serif;
   font-style: normal;
 }
@@ -42,6 +42,7 @@ footer {
   margin: 0;
   box-sizing: border-box;
   position: relative;
+  cursor: pointer;
 }
 
 .button__basket {
@@ -51,12 +52,31 @@ footer {
 .button__basket:after {
   content: "";
   position: absolute;
-  top: 0rem;
-  right: 0.87rem;
-  bottom: 0rem;
-  left: 5.4rem;
+  top: 0px;
+  right: 13.9px;
+  bottom: 0px;
+  left: 86.4px;
   background: transparent;
   background: url("/assets/img/icon_basket.svg") no-repeat center center;
+  opacity: 1;
+  z-index: 2;
+}
+
+.button__buy {
+  font-size: 2.2rem;
+  padding: 28px 90px 21px 33px;
+  margin-top: 1.87rem;
+}
+
+.button__buy:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 31.84px;
+  bottom: 0px;
+  left: 196px;
+  background: transparent;
+  background: url("/assets/img/icon_card.svg") no-repeat center center;
   opacity: 1;
   z-index: 2;
 }
@@ -83,6 +103,57 @@ nav {
   color: #5222d0;
 }
 
+.list__inside {
+  color: #000000;
+}
+
 a {
   text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: 45.6rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 30.7rem;
+  margin-top: 4.75rem;
+  margin-left: 7.87rem;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: right;
+  width: calc(1288px-30.7rem);
+  margin-top: 4.75rem;
+}
+
+h1 {
+  font-family: "Intro", sans-serif;
+  font-style: normal;
+  font-size: 3.75rem;
+  line-height: 120%;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "RobotoSlab", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 160%;
+  color: #000000;
 }
