@@ -1,0 +1,88 @@
+@font-face {
+  src: url(/assets/fonts/IntroDemo-BlackInlineCAPS.otf);
+  font-family: "Intro", sans-serif;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(/assets/fonts/RobotoSlab-Regular.ttf);
+  font-family: "RobotoSlab", sans-serif;
+  font-style: normal;
+}
+
+header,
+footer {
+  width: 1288px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5.6rem auto 0px;
+  text-align: end;
+  justify-content: space-between;
+}
+
+footer {
+  flex-direction: column;
+  margin-top: 0rem;
+  margin-bottom: 5rem;
+  text-align: start;
+}
+
+.button {
+  background-color: #5222d0;
+  border: 0px;
+  border-radius: 50px;
+  font-family: "Intro", sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  justify-items: center;
+  padding: 14px 33px 11px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.button__basket {
+  font-size: 0.8rem;
+}
+
+.button__basket:after {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  right: 0.87rem;
+  bottom: 0rem;
+  left: 5.4rem;
+  background: transparent;
+  background: url("/assets/img/icon_basket.svg") no-repeat center center;
+  opacity: 1;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 33.25rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-decoration: none;
+  justify-content: space-between;
+  font-family: "RobotoSlab", sans-serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.list__main {
+  color: #5222d0;
+}
+
+a {
+  text-decoration: none;
+}
