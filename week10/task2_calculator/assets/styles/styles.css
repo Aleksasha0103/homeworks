@@ -2,7 +2,7 @@ html {
   background-color: #f4f2ea;
 }
 
-.gallery {
+.main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -12,7 +12,7 @@ html {
   margin: 0 auto;
 }
 
-.gallery__title {
+.main__title {
   font-family: "Open Sans, sans-serif";
   font-style: normal;
   font-weight: normal;
@@ -23,50 +23,52 @@ html {
   margin-top: 50px;
 }
 
-.gallery__container {
-  width: 300px;
-  height: 300px;
+.main__container {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   border-radius: 5px;
   border: 1px solid #000000;
   margin-bottom: 50px;
+  padding: 20px;
 }
 
-.gallery__image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+.main__input {
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 
-.gallery__buttons-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  margin-bottom: 50px;
+input {
+  width: 250px;
 }
 
-.gallery__button1,
-.gallery__button2 {
+.main__label-price {
+  margin-right: 18px;
+}
+
+.main__button-sum {
   font-family: "Open Sans, sans-serif";
   font-style: normal;
   font-weight: normal;
   background-color: #000000;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 5px;
   padding: 10px 50px;
   box-sizing: border-box;
+  justify-self: center;
+  align-self: center;
+  margin: 50px 0px;
 }
 
-.gallery__button2 {
-  padding: 10px 65px;
-}
-
-.gallery__button1:hover,
-.gallery__button2:hover {
+.main__button-sum:hover {
   border: 3px solid rgb(168, 163, 163);
   cursor: pointer;
+}
+
+#result-field {
+  margin-top: 10px;
 }

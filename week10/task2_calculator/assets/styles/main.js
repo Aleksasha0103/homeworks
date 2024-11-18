@@ -1,17 +1,9 @@
-function text() {
-  console.log("Я учу JavaScript!");
-}
+let quantity = parseInt(document.getElementById("quantityInput").value) || 2;
+let price = parseInt(document.getElementById("priceInput").value) || 15000000;
 
-text();
-
-let element = document.getElementById("element");
-let image = document.getElementById("element-image-cat");
-console.log(image);
-
-function changeImagetoCat1() {
-  image.src = "/task1_gallery/assets/img/cat1.jpg";
-}
-
-function changeImagetoCat2() {
-  image.src = "/task1_gallery/assets/img/cat2.jpg";
+function calculateTotalPrice(quantity = 2, price = 15000000) {
+  let cost = quantity * price;
+  let textResult = cost.toLocaleString("ru-RU");
+  alert("Стоимость покупки: " + textResult + " рублей.");
+  textResult = document.getElementById("result-field");
 }

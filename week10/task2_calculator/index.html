@@ -3,25 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Галерея кошек</title>
-    <meta name="keywords" content="Галерея кошек" />
-    <meta name="description" content="Галерея кошек" />
-    <link rel="stylesheet" href="/task1_gallery/assets/styles/reset.css" />
-    <link rel="stylesheet" href="/task1_gallery/assets/styles/styles.css" />
+    <title>Калькулятор</title>
+    <meta name="keywords" content="калькулятор" />
+    <meta name="description" content="Калькулятор." />
+    <link rel="stylesheet" href="/task2_calculator/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/task2_calculator/assets/styles/styles.css" />
   </head>
-  <body id="element">
+  <body>
     <main>
-      <section class="gallery">
-        <h1 class="gallery__title">Галерея кошек</h1>
-        <div id="element-content" class="gallery__container">
-          <img id="element-image-cat" class="gallery__image" src="/task1_gallery/assets/img/cat1.jpg" alt="Кот - 1" />
-        </div>
-        <div class="gallery__buttons-wrapper">
-          <button onclick="changeImagetoCat1()" class="gallery__button1">Previous</button>
-          <button onclick="changeImagetoCat2()" class="gallery__button2">Next</button>
+      <section class="main">
+        <h1 class="main__title">Калькулятор</h1>
+        <div id="element-content" class="main__container">
+          <div class="main__input">
+            <label for="quantity">Количество товаров: </label>
+            <input type="number" min="0" placeholder="Введите целое число" id="quantityInput" />
+          </div>
+          <div class="main__input">
+            <label class="main__label-price" for="price">Цена товара, руб.: </label>
+            <input type="number" min="0" placeholder="Введите цену за единицу товара" id="priceInput" />
+          </div>
+          <button onclick="calculateTotalPrice()" class="main__button-sum">Рассчитать стоимость</button>
+          <form>
+            <label class="main__label-cost" for="result-field">
+              Стоимость:
+              <textarea name="result-field" id="result-field" cols="55" rows="5"></textarea>
+            </label>
+          </form>
         </div>
       </section>
     </main>
-    <script src="/task1_gallery/assets/styles/main.js"></script>
+    <script src="/task2_calculator/assets/styles/main.js"></script>
   </body>
 </html>
