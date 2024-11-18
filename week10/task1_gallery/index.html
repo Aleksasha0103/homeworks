@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея кошек</title>
+    <meta name="keywords" content="Галерея кошек" />
+    <meta name="description" content="Галерея кошек" />
+    <link rel="stylesheet" href="/task1_gallery/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/task1_gallery/assets/styles/styles.css" />
+  </head>
+  <body id="element">
+    <main>
+      <section class="gallery">
+        <h1 class="gallery__title">Галерея кошек</h1>
+        <div id="element-content" class="gallery__container">
+          <img id="element-image-cat" class="gallery__image" src="/task1_gallery/assets/img/cat1.jpg" alt="Кот - 1" />
+        </div>
+        <div class="gallery__buttons-wrapper">
+          <button onclick="changeImagetoCat1()" class="gallery__button1">Previous</button>
+          <button onclick="changeImagetoCat2()" class="gallery__button2">Next</button>
+        </div>
+      </section>
+    </main>
+    <script src="/task1_gallery/assets/styles/main.js"></script>
+  </body>
+</html>
