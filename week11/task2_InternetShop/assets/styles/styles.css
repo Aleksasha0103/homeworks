@@ -1,0 +1,78 @@
+html {
+  background-color: #f4f2ea;
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.basket__title {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: #373739;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.basket__cardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.basket__img-container {
+  width: 200px;
+  height: 300px;
+}
+
+.basket__img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.basket__itemDescription {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.main-part__button {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  background-color: #20a829;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.main-part__button {
+  cursor: pointer;
+}
+
+li,
+.crossed {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  color: #111111;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
