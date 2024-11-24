@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <meta name="keywords" content="todo list" />
+    <meta name="description" content="ToDo List." />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-part">
+        <h1 class="main-part__title">ToDo List</h1>
+        <div class="main-part__input-button">
+          <input class="main-part__input" type="text" placeholder="Введите текст задачи" id="inputTask" size="50" />
+          <button class="main-part__button" id="taskButton">Добавить</button>
+          <div class="main-part__taskListContainer">
+            <ul class="main-part__taskList" id="taskList"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/styles/main.js"></script>
+  </body>
+</html>
