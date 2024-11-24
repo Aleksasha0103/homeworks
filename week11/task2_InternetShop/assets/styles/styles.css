@@ -13,7 +13,7 @@ html {
 }
 
 .basket__title {
-  font-family: "Open Sans, sans-serif";
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -23,11 +23,30 @@ html {
   margin-top: 50px;
 }
 
-.basket__cardsContainer {
+.basket__cardsContainer,
+.result__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.result__container {
+  flex-direction: row;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+.result_resultTextAndSum {
+  margin-left: auto;
+}
+
+.basket__card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 20px;
+  border: 1px solid #000000;
+  padding: 10px;
 }
 
 .basket__img-container {
@@ -41,38 +60,72 @@ html {
   object-fit: cover;
 }
 
-.basket__itemDescription {
+.basket__itemDescription,
+.basket__itemPrice,
+.basket__itemCurrency,
+.result__resultText,
+.result__resultSum,
+.result__resultCurrency {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
-
-.main-part__button {
-  font-family: "Open Sans, sans-serif";
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  background-color: #20a829;
+  color: #535353;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.basket__itemPriceContainer,
+.result__resultSum {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: auto;
+}
+
+.basket__itemPrice,
+.basket__itemCurrency,
+.result__resultSum,
+.result__resultCurrency {
+  color: #343bc4;
+  font-weight: 700;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.basket__itemName,
+.result__resultText {
+  color: #111111;
+  font-weight: 700;
+}
+
+.result__resultText {
+  text-align: right;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+.basket__itemSpanGap {
+  padding-left: 20px;
+}
+
+.result__discountButton {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #000000;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
-  padding: 5px 10px;
+  padding: 20px 50px;
   box-sizing: border-box;
 }
 
 .main-part__button {
   cursor: pointer;
-}
-
-li,
-.crossed {
-  font-family: "Open Sans, sans-serif";
-  font-style: normal;
-  font-weight: normal;
-  color: #111111;
-  font-size: 18px;
-  padding: 5px;
-}
-
-.crossed {
-  text-decoration: line-through;
 }

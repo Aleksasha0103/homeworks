@@ -14,21 +14,82 @@
       <section class="basket">
         <h1 class="basket__title">Корзина</h1>
         <div class="basket__cardsContainer">
-          <div class="basket__cards">
+          <div class="basket__card">
             <div class="basket__img-container">
-            <img class="basket__img" src="/assets/images/1_shirt_pink.jpg" alt="Розовая рубашка">
+              <img class="basket__img" src="/assets/images/1_shirt_pink.jpg" alt="Розовая рубашка" />
+            </div>
+            <div class="basket__itemDescription">
+              <p class="basket__itemName">Рубашка</p>
+              <p class="basket__itemColor">Цвет: <span class="basket__itemSpanGap">розовый</span></p>
+              <p class="basket__itemSize">Размер: <span class="basket__itemSpanGap">S</span></p>
+              <p class="basket__itemQuantity">Количество: <span class="basket__itemSpanGap">1</span></p>
+            </div>
+            <div class="basket__itemPriceContainer">
+              <p class="basket__itemPrice" id="price">2000</p>
+              <p class="basket__itemCurrency">руб.</p>
+            </div>
           </div>
-          <div class="basket__itemDescription">
-            <p class="basket__itemName">Рубашка</p>
-            <p class="basket__itemName">Цвет: розовый</p>
-            <p class="basket__itemName">Размер: S</p>
-            <p class="basket__itemName">Количество: 1</p>
+
+          <div class="basket__card">
+            <div class="basket__img-container">
+              <img class="basket__img" src="/assets/images/2_dress_pink.jpg" alt="Розовое платье" />
+            </div>
+            <div class="basket__itemDescription">
+              <p class="basket__itemName">Платье</p>
+              <p class="basket__itemColor">Цвет: <span class="basket__itemSpanGap">розовый</span></p>
+              <p class="basket__itemSize">Размер: <span class="basket__itemSpanGap">S</span></p>
+              <p class="basket__itemQuantity">Количество: <span class="basket__itemSpanGap">1</span></p>
+            </div>
+            <div class="basket__itemPriceContainer">
+              <p class="basket__itemPrice" id="price">2500</p>
+              <p class="basket__itemCurrency">руб.</p>
+            </div>
           </div>
+
+          <div class="basket__card">
+            <div class="basket__img-container">
+              <img class="basket__img" src="/assets/images/3_jackets_green.jpg" alt="Зелёный жакет" />
+            </div>
+            <div class="basket__itemDescription">
+              <p class="basket__itemName">Жакет</p>
+              <p class="basket__itemColor">Цвет: <span class="basket__itemSpanGap">зелёный</span></p>
+              <p class="basket__itemSize">Размер: <span class="basket__itemSpanGap">S</span></p>
+              <p class="basket__itemQuantity">Количество: <span class="basket__itemSpanGap">1</span></p>
+            </div>
+            <div class="basket__itemPriceContainer">
+              <p class="basket__itemPrice" id="price">4000</p>
+              <p class="basket__itemCurrency">руб.</p>
+            </div>
+          </div>
+
+          <div class="basket__card">
+            <div class="basket__img-container">
+              <img class="basket__img" src="/assets/images/4_skirt_white.jpg" alt="Белая юбка" />
+            </div>
+            <div class="basket__itemDescription">
+              <p class="basket__itemName">Юбка</p>
+              <p class="basket__itemColor">Цвет: <span class="basket__itemSpanGap">белый</span></p>
+              <p class="basket__itemSize">Размер: <span class="basket__itemSpanGap">S</span></p>
+              <p class="basket__itemQuantity">Количество: <span class="basket__itemSpanGap">1</span></p>
+            </div>
+            <div class="basket__itemPriceContainer">
+              <p class="basket__itemPrice" id="price">2500</p>
+              <p class="basket__itemCurrency">руб.</p>
+            </div>
           </div>
         </div>
 
-          <button class="main-part__button" id="taskButton">Добавить</button>
-         
+        <div class="result__container">
+          <button class="result__discountButton" id="discountButton">Использовать купон на 20 %</button>
+          <div class="result_resultTextAndSum">
+            <div class="result__resultText">
+              <p>Итого:</p>
+            </div>
+            <div class="result__resultSum">
+              <p id="resultSum"></p>
+              <p class="result__resultCurrency">руб.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
