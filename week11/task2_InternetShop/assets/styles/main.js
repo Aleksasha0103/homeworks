@@ -1,23 +1,18 @@
-// const buttonElement = document.querySelector("taskButton");
-// const inputTask = document.getElementById("inputTask");
-// const taskList = document.getElementById("taskList");
-
-// function taskCreation() {
-//   const inputTaskValue = inputTask.value;
-//   const taskListItem = document.createElement("li");
-//   taskListItem.textContent = inputTaskValue;
-//   taskList.append(taskListItem);
-//   inputTask.value = "";
+// function sum() {
+//   const allPrices = document.getElementsByClassName(".basket__itemPrice");
+//   const sum = 0;
+//   for (const i = 0; i <= allPrices.length; i++) {
+//     sum += i;
+//   }
 // }
 
-// taskButton.addEventListener("click", taskCreation);
+const resultSum = document.getElementById("resultSum");
+// resultSum.innerHTML = sum();
 
-// function taskChecking() {
-//   taskList.addEventListener("click", function (cross) {
-//     if (cross.target.tagName === "LI") {
-//       cross.target.classList.toggle("crossed");
-//     }
-//   });
-// }
-
-// taskList.addEventListener("click", taskChecking);
+function discountCount() {
+  const initialSum = resultSum.innerHTML;
+  const discountSum = initialSum * 0.8;
+  initialSum.innerHTML = discountCount;
+}
+const discountButton = document.getElementById("discountButton");
+discountButton.addEventListener("click", discountCount);

@@ -96,6 +96,10 @@ html {
   padding-left: 5px;
 }
 
+.result__resultCurrency {
+  margin-left: auto;
+}
+
 .basket__itemName,
 .result__resultText {
   color: #111111;
@@ -124,6 +128,7 @@ p {
   border: none;
   padding: 20px 50px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .main-part__button {
