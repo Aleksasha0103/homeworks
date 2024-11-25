@@ -1,21 +1,22 @@
-// const allPrices = document.querySelectorAll(".basket__itemPrice");
-// const allPricesArray = Array.from(allPrices);
+const allPrices = document.querySelectorAll(".basket__itemPrice");
+const allPricesArray = Array.from(allPrices);
 
-// function sumAll() {
-//   const sumAllPricesArray = 0;
-//   for (const i = 0; i <= allPricesArray.length; i++) {
-//     sum += allPricesArray[i];
-//   }
-//   return;
-// }
+function sumAll() {
+  let sumAllPrices = 0;
+  for (let i = 0; i < allPricesArray.length; i++) {
+    let sumPrices = parseFloat(allPricesArray[i].textContent);
+    sumAllPrices += sumPrices;
+  }
+  return sumAllPrices;
+}
 
 let ifDiscountMade = false;
-const resultSum = document.getElementById("resultSum");
-// resultSum.innerHTML = sumAll();
+let resultSum = document.getElementById("resultSum");
+resultSum.innerHTML = sumAll();
 
 function discountCount() {
   if (ifDiscountMade === false) {
-    const initialSum = parseFloat(resultSum.innerHTML);
+    let initialSum = parseFloat(resultSum.innerHTML);
     const discountSum = initialSum * 0.8;
     resultSum.innerHTML = discountSum.toFixed(0);
     ifDiscountMade = true;
