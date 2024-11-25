@@ -1,18 +1,28 @@
-// function sum() {
-//   const allPrices = document.getElementsByClassName(".basket__itemPrice");
-//   const sum = 0;
-//   for (const i = 0; i <= allPrices.length; i++) {
-//     sum += i;
+// const allPrices = document.querySelectorAll(".basket__itemPrice");
+// const allPricesArray = Array.from(allPrices);
+
+// function sumAll() {
+//   const sumAllPricesArray = 0;
+//   for (const i = 0; i <= allPricesArray.length; i++) {
+//     sum += allPricesArray[i];
 //   }
+//   return;
 // }
 
+let ifDiscountMade = false;
 const resultSum = document.getElementById("resultSum");
-// resultSum.innerHTML = sum();
+// resultSum.innerHTML = sumAll();
 
 function discountCount() {
-  const initialSum = resultSum.innerHTML;
-  const discountSum = initialSum * 0.8;
-  initialSum.innerHTML = discountCount;
+  if (ifDiscountMade === false) {
+    const initialSum = parseFloat(resultSum.innerHTML);
+    const discountSum = initialSum * 0.8;
+    resultSum.innerHTML = discountSum.toFixed(0);
+    ifDiscountMade = true;
+  } else {
+    alert("Скидка уже применена!");
+  }
 }
+
 const discountButton = document.getElementById("discountButton");
 discountButton.addEventListener("click", discountCount);
