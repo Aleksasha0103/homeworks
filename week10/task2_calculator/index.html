@@ -6,8 +6,8 @@
     <title>Калькулятор</title>
     <meta name="keywords" content="калькулятор" />
     <meta name="description" content="Калькулятор." />
-    <link rel="stylesheet" href="/task2_calculator/assets/styles/reset.css" />
-    <link rel="stylesheet" href="/task2_calculator/assets/styles/styles.css" />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
   </head>
   <body>
     <main>
@@ -15,11 +15,11 @@
         <h1 class="main__title">Калькулятор</h1>
         <div id="element-content" class="main__container">
           <div class="main__input">
-            <label for="quantity">Количество товаров: </label>
+            <label for="quantityInput">Количество товаров: </label>
             <input type="number" min="0" placeholder="Введите целое число" id="quantityInput" />
           </div>
           <div class="main__input">
-            <label class="main__label-price" for="price">Цена товара, руб.: </label>
+            <label class="main__label-price" for="priceInput">Цена товара, руб.: </label>
             <input type="number" min="0" placeholder="Введите цену за единицу товара" id="priceInput" />
           </div>
           <button onclick="calculateTotalPrice()" class="main__button-sum">Рассчитать стоимость</button>
@@ -32,6 +32,6 @@
         </div>
       </section>
     </main>
-    <script src="/task2_calculator/assets/styles/main.js"></script>
+    <script src="/assets/scripts/main.js"></script>
   </body>
 </html>
