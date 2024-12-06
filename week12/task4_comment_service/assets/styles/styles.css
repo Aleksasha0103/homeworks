@@ -94,8 +94,9 @@ html {
 #avatarImage {
   width: 100px;
   height: 100px;
-  background-size: cover;
+  object-fit: cover;
   border: none;
+  visibility: hidden;
 }
 
 .main-part__chat-section__name-container {
