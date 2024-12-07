@@ -8,7 +8,7 @@ function getName() {
 function putName() {
   const inputName = getName();
   const userName = document.querySelector(".main-part__chat-section__name-container");
-  const temporaryUserName = (userName.textContent = inputName.replace(/[^A-Za-zА-Яа-яЁё/s]/g, "").toLowerCase());
+  const temporaryUserName = (userName.textContent = inputName.replace(/[^A-Za-zА-Яа-яЁё\s]/g, "").toLowerCase());
   userName.textContent = temporaryUserName.charAt(0).toUpperCase() + temporaryUserName.slice(1);
   document.getElementById("inputName").value = "";
 }
@@ -27,7 +27,7 @@ function putAvatar() {
 }
 
 function getComment() {
-  const inputComment = document.getElementById("inputСomment").value;
+  const inputComment = document.getElementById("inputComment").value;
   return inputComment;
 }
 
@@ -36,7 +36,7 @@ function putComment() {
   const userComment = document.querySelector(".main-part__chat-section__comment-container");
   userComment.textContent = inputComment.replace(/viagra/g, "***").replace(/XXX/g, "***");
   userComment.style.borderBottom = "2px dashed #593dca";
-  document.getElementById("inputСomment").value = "";
+  document.getElementById("inputComment").value = "";
 }
 
 buttonSend.addEventListener("click", putName);
