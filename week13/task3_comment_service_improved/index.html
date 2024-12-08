@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис комментариев</title>
+    <meta name="keywords" content="сервис комментариев" />
+    <meta name="description" content="Сервис комментариев." />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="main__title">Сервис комментариев со спам-фильтром</h1>
+      <section class="main-part">
+        <section class="main-part__inputs-section">
+          <h2 class="main-part__title">Оставьте ваш комментарий:</h2>
+          <fieldset class="main-part__inputs-section__input main-part__inputs-section__IfShowNameRadioButtons">
+            <legend>Показывать ваше имя?</legend>
+            <label class="main-part__inputs-section__IfShowNameRadioButtons__yes" for="yes"
+              ><input type="radio" name="IfShowName" value="Yes" id="yes" checked /><span class="custom-checkbox"></span
+              >Yes</label
+            >
+            <label class="main-part__inputs-section__IfShowNameRadioButtons__no" for="no"
+              ><input type="radio" name="IfShowName" value="No" id="no" /><span class="custom-checkbox"></span>No</label
+            >
+          </fieldset>
+          <label class="main-part__inputs-section__label" for="inputName"
+            >Введите ваше <span class="main-part__inputs-section__label__bold">Имя:</span></label
+          >
+          <input class="main-part__inputs-section__input" type="text" id="inputName" size="50" />
+          <label class="main-part__inputs-section__label" for="inputAvatarLink"
+            >Введите ссылку <span class="main-part__inputs-section__label__bold">вашего аватара:</span></label
+          >
+          <input class="main-part__inputs-section__input" type="text" id="inputAvatarLink" size="50" />
+          <label class="main-part__inputs-section__label" for="inputComment">Оставьте комментарий:</label>
+          <textarea
+            class="main-part__inputs-section__input textarea-section"
+            name="inputComment"
+            id="inputComment"
+            cols="55"
+            rows="5"
+          ></textarea>
+          <button class="main-part__inputs-section__button" id="buttonSend">Отправить</button>
+        </section>
+
+        <section class="main-part__chat-section">
+          <h2 class="main-part__title">Чат:</h2>
+          <div class="main-part__chat-section_wrapper" id="wrapper">
+            <div class="main-part__chat-section__container-image-name-date">
+              <div class="main-part__chat-section__image-container">
+                <img id="avatarImage" alt="" />
+              </div>
+              <div class="main-part__chat-section__name-container"></div>
+              <div class="main-part__chat-section__date-container"></div>
+            </div>
+            <div class="main-part__chat-section__comment-container"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+</html>
