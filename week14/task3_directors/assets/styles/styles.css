@@ -16,10 +16,6 @@ main {
   width: 100%;
 }
 
-.h2-title {
-  margin-bottom: 5px;
-}
-
 .directors {
   display: flex;
   flex-direction: column;
@@ -51,6 +47,7 @@ div {
   justify-content: space-between;
   width: 100%;
   font-size: 17px;
+  margin-bottom: 20px;
 }
 
 .directors__director__career {

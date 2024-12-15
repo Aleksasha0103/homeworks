@@ -45,13 +45,13 @@ const directors = [
 ];
 
 const directorsWholeSection = document.querySelector(".directors");
-directors.forEach((director) => {
+directors.forEach((director, index) => {
   const directorDiv = document.createElement("div");
   directorDiv.classList.add("directors__director");
 
   const directorName = document.createElement("div");
   directorName.classList.add("directors__director__name");
-  directorName.textContent = director.name;
+  directorName.textContent = `${index + 1}. ${director.name}`;
   directorDiv.appendChild(directorName);
 
   const twoBlocksCareerAndFilms = document.createElement("div");
@@ -74,6 +74,11 @@ directors.forEach((director) => {
 
   directorsWholeSection.appendChild(directorDiv);
 });
+
+const h2title = document.createElement("h2");
+h2title.classList.add("h2-title");
+h2title.textContent = "Лучшие фильмы этих режиссёров";
+directorsWholeSection.appendChild(h2title);
 
 const topFilmsList = directors.map((director) => director.top_rated_film);
 const directorTopRatedFilmContainer = document.createElement("p");
