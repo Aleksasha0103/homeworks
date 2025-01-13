@@ -1,0 +1,98 @@
+html {
+  background-color: #f4f2ea;
+}
+
+.main-part {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.main-part__title {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  color: #373739;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+
+.main-part_content,
+.button-align {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80vw;
+  justify-content: flex-start;
+}
+
+.button-align {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-part__form {
+  width: 34vw;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  width: 350px;
+}
+
+.input-label,
+.radiobutton-legend,
+.agreement-label {
+  display: inline-block;
+  width: 150px;
+  padding: 15px 0px 10px 0px;
+}
+
+.radiobutton-legend {
+  display: inline;
+  float: left;
+}
+
+.radiobutton-label {
+  display: inline;
+  margin: 15px 0px 10px 0px;
+}
+
+.radiobutton {
+  display: inline;
+  width: 30px;
+  margin: 15px 0px 10px 0px;
+}
+
+.agreement-label {
+  width: 260px;
+}
+
+.submit-button {
+  align-self: center;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  padding: 15px 30px;
+  margin: 15px 0px;
+  background-color: rgb(73, 234, 97);
+  color: #000000;
+  font-size: 14px;
+}
+
+.error-message {
+  font-size: 13px;
+  color: #616163;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+}

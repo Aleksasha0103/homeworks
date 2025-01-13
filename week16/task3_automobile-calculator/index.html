@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор для расчёта стоимости автомобиля</title>
+    <meta name="keywords" content="калькулятор для расчёта стоимости автомобиля" />
+    <meta name="description" content="Калькулятор для расчёта стоимости автомобиля." />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-part">
+        <h1 class="main-part__title">Калькулятор для расчёта стоимости автомобиля</h1>
+        <div class="main-part__content">
+          <form class="main-part__form" name="form">
+            <label for="brand" class="input-label">Марка:</label>
+            <select id="brand" name="brand" class="input" required>
+              <option value="doctor">Reno</option>
+              <option value="programmer">Opel</option>
+              <option value="teacher">Mazda</option>
+              <option value="designer">Jaguar</option>
+            </select>
+            <div class="error-message" id="professionSelectError"></div>
+
+            <label for="brand" class="input-label">Модель:</label>
+            <select id="brand" name="brand" class="input" required>
+              <option value="reno1">Reno1</option>
+              <option value="reno2">Reno2</option>
+              <option value="opel1">Opel1</option>
+              <option value="opel2">Opel2</option>
+              <option value="mazda1">Mazda1</option>
+              <option value="mazda2">Mazda2</option>
+              <option value="jaguar1">Jaguar1</option>
+              <option value="jaguar2">Jaguar2</option>
+            </select>
+
+            <fieldset>
+              <legend class="radiobutton-legend" name="fuel-radiobutton">Вид топлива:</legend>
+              <label for="petrol" class="radiobutton-label">
+                <input type="radio" class="radiobutton" name="fuel" value="petrol" id="petrol" />бензин</label
+              >
+              <label for="diesel" class="radiobutton">
+                <input type="radio" class="radiobutton" name="fuel" value="diesel" id="diesel" />дизель</label
+              >
+              <label for="gas" class="radiobutton">
+                <input type="radio" class="radiobutton" name="fuel" value="gas" id="gas" />газ</label
+              >
+              <label for="electricity" class="radiobutton">
+                <input
+                  type="radio"
+                  class="radiobutton"
+                  name="fuel"
+                  value="electricity"
+                  id="electricity"
+                />электричество</label
+              >
+            </fieldset>
+
+            <label for="engineVolume" class="input-label">Объём двигателя: </label>
+            <input
+              type="number"
+              class="input"
+              id="engineVolume"
+              name="engineVolume"
+              placeholder="Введите объём двигателя"
+              minlength="1,1"
+              maxlength="3,5"
+              required
+            />
+            <div class="error-message" id="nameFieldError"></div>
+
+            <fieldset>
+              <legend class="radiobutton-legend" name="condition">Состояние автомобиля: </legend>
+              <label for="new" class="radiobutton-label">
+                <input type="radio" class="radiobutton" name="condition" value="new" id="new" />новый</label
+              >
+              <label for="preUsed" class="radiobutton">
+                <input type="radio" class="radiobutton" name="condition" value="preUsed" id="preUsed" />б/у</label
+              >
+
+              <label for="owners" class="input-label">Количество владельцев:</label>
+              <select id="owners" name="owners" class="input" required>
+                <option value="reno1">1-2 владельца</option>
+                <option value="reno2">более 3 владельцев</option>
+                </select>
+
+                <fieldset>
+                  <legend class="radiobutton-legend" name="condition">Способ оплаты: </legend>
+                  <label for="card" class="radiobutton-label">
+                    <input type="radio" class="radiobutton" name="payment" value="card" id="card" />карта</label
+                  >
+                  <label for="cash" class="radiobutton">
+                    <input type="radio" class="radiobutton" name="payment" value="cash" id="cash" />наличные</label
+                  >
+                  <label for="currentAccount" class="radiobutton">
+                    <input type="radio" class="radiobutton" name="payment" value="currentAccount" id="currentAccount" />на расчётный счёт</label
+                  >
+
+
+            <div class="button-align">
+              <button type="submit" class="submit-button" name="submitBtn" id="submitBtn" disabled>
+                Рассчитать
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+</html>
