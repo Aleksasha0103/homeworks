@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма регистрации</title>
+    <meta name="keywords" content="форма регистрации" />
+    <meta name="description" content="Форма регистрации." />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-part">
+        <h1 class="main-part__title">Форма регистрации</h1>
+        <div class="main-part__content">
+          <form class="main-part__form" name="form">
+            <label for="name" class="input-label">Введите ваше имя: </label>
+            <input
+              type="text"
+              class="input"
+              id="name"
+              name="name"
+              placeholder="Александра"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+            <div class="error-message" id="nameFieldError"></div>
+
+            <label for="email" class="input-label">Введите ваш E-mail: </label>
+            <input
+              type="email"
+              class="input"
+              id="email"
+              name="email"
+              placeholder="pochta@mail.ru"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
+            />
+            <div class="error-message" id="emailFieldError"></div>
+
+            <label for="age" class="input-label">Введите ваш возраст: </label>
+            <input type="number" class="input" id="age" name="age" placeholder="34" required />
+            <div class="error-message" id="ageRadioError"></div>
+
+            <fieldset>
+              <legend class="radiobutton-legend">Укажите ваш пол:</legend>
+              <label for="male" class="radiobutton-label"
+                ><input type="radio" class="radiobutton" name="gender" value="male" id="male" />М</label
+              >
+              <label for="female" class="radiobutton"
+                ><input type="radio" class="radiobutton" name="gender" value="female" id="female" />Ж</label
+              >
+            </fieldset>
+            <div class="error-message" id="genderRadioError"></div>
+
+            <label for="profession" class="input-label">Укажите профессию:</label>
+            <select id="profession" name="profession" class="input" required>
+              <option value="doctor">Врач</option>
+              <option value="programmer" selected>Программист</option>
+              <option value="teacher">Учитель</option>
+              <option value="designer">Дизайнер</option>
+              <option value="ingeneer">Инженер</option>
+              <option value="salesman">Продавец</option>
+              <option value="another">Другое</option>
+            </select>
+            <div class="error-message" id="professionSelectError"></div>
+
+            <label for="password" class="input-label">Придумайте пароль: </label>
+            <input
+              type="password"
+              class="input"
+              id="password"
+              name="password"
+              placeholder="минимум: 8 символов, 1 заглавная, 1 строчная, 1 цифра"
+              minlength="8"
+              pattern="^(?=.*[A-Za-zА-Яа-яЁё])(?=.*[A-ZА-ЯЁ])(?=.*[a-zа-яё])(?=.*\d)[A-Za-zА-Яа-яЁё\d]+$"
+              required
+            />
+            <div class="error-message" id="passwordFieldError"></div>
+
+            <label for="agreement" class="agreement-label">Я даю согласие на обработку данных</label>
+            <input type="checkbox" class="agreement-checkbox" name="agreement" value="1" required /><br />
+            <div class="error-message" id="agreementCheckboxError"></div>
+
+            <div class="button-align">
+              <button type="submit" class="submit-button" name="submitBtn" id="submitBtn" disabled>
+                Зарегистрироваться
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+</html>
