@@ -1,0 +1,42 @@
+html {
+  background-color: #f4f2ea;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.main-part__title {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  color: #373739;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+
+div {
+  font-size: 17px;
+  padding: 5px;
+}
+
+img {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  object-fit: cover;
+  width: 200px;
+  height: 100px;
+}
+
+.main__price {
+  margin-bottom: 50px;
+}
