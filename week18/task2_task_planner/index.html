@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task planner</title>
+    <meta name="keywords" content="task planner" />
+    <meta name="description" content="Task planner." />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-part">
+        <h1 class="main-part__title">Планировщик задач</h1>
+        <div class="main-part__enter-field">
+          <p class="main-part__enter-field__paragraph">Добавить задачу</p>
+          <div class="main-part__enter-field__input-button-field">
+            <input class="main-part__enter-field__input" type="text" placeholder="Задача" id="inputTask" size="53" />
+            <button class="main-part__enter-field__button" id="addingButton">Добавить</button>
+          </div>
+        </div>
+        <div class="main-part__task-list-field">
+          <p class="main-part__task-list-field__paragraph">Список задач</p>
+          <div class="main-part__task-list-field__tasks-container" id="taskList">
+            <p class="main-part__task-list-field__default-text" id="defaultParagraph">Нет задач</p>
+          </div>
+        </div>
+        <button class="main-part__button__clearing-button" id="clearingButton">Очистить список задач</button>
+      </section>
+    </main>
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+</html>
