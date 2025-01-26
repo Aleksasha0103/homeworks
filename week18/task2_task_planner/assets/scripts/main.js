@@ -29,6 +29,9 @@ function taskCreation() {
     taskItemCheckboxLabel.append(taskItemCustomCheckbox);
     inputTask.value = "";
     clearingButton.className = "main-part__button__clearing-button-active";
+    let localStorageArray = JSON.parse(window.localStorage.getItem("Tasks")) || [];
+    localStorageArray.push(inputTaskValue);
+    window.localStorage.setItem("Task", JSON.stringify(localStorageArray));
   }
 }
 
