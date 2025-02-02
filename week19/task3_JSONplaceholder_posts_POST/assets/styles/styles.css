@@ -1,0 +1,112 @@
+html {
+  background-color: #f4f2ea;
+}
+
+.main-part {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: flex-start;
+  width: 47vw;
+  margin: 0 auto;
+}
+
+.main-part__enter-field,
+.main-part__posts-list-field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 46vw;
+}
+
+.main-part__title,
+.main-part__enter-field__paragraph,
+.main-part__posts-list-field__paragraph {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: #373739;
+  margin-bottom: 50px;
+  margin-top: 90px;
+}
+
+.main-part__enter-field__paragraph {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.main-part__posts-list-field__paragraph {
+  margin-top: 10px;
+}
+
+.main-part__enter-field__inputs-button-field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-part__enter-field__input {
+  margin-right: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #a8a8ab;
+}
+
+.main-part__enter-field__button {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: 700;
+  background-color: #ffb689;
+  color: #000000;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 75px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.main-part__posts-list-field__posts-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 90px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #a8a8ab;
+  background-color: #ffffff;
+}
+
+.main-part__posts-list-field__title-item,
+.main-part__posts-list-field__body-item,
+.main-part__posts-list-field__error-item {
+  font-family: "Open Sans, sans-serif";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+  padding: 5px;
+  margin-bottom: 3px;
+}
+
+.main-part__posts-list-field__body-item {
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.main-part__posts-list-field__error-item {
+  color: #c71717;
+  text-align: center;
+}
