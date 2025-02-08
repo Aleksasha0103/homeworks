@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars</title>
+    <meta name="keywords" content="star wars" />
+    <meta name="description" content="Star Wars." />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-part">
+        <h1 class="main-part__title">Star Wars. Кого или что будем искать?</h1>
+        <div class="main-part__inputs-button-field">
+          <label for="objectSelect"></label>
+          <select class="main-part__inputs-button-field__object-select" name="objectSelect" id="objectSelect">
+            <option value="films">Фильмы</option>
+            <option value="people">Персонажи</option>
+            <option value="starships">Звёздные корабли</option>
+            <option value="vehicles">Наземный транспорт</option>
+            <option value="species">Расы</option>
+            <option value="planets">Планеты</option>
+          </select>
+          <label for="numberSelect"></label>
+          <select class="main-part__inputs-button-field__number-select" name="numberSelect" id="numberSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <button class="main-part__inputs-button-field__button" id="searchButton">Вперёд!</button>
+        </div>
+        <div class="main-part__search-result-field">
+          <div class="main-part__search-result-field__result-container" id="resultField"></div>
+          <div class="main-part__search-result-field__error-container" id="errorField"></div>
+          <div class="main-part__search-result-field__finally-container" id="finallyField"></div>
+        </div>
+      </section>
+    </main>
+    <script src="/assets/scripts/main.js"></script>
+  </body>
+</html>
