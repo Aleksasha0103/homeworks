@@ -34,7 +34,7 @@ searchButton.addEventListener("click", () => {
       errorField.textContent = "";
     })
     .catch((error) => {
-      errorField.innerHTML = `Запрос отклонён. Вероятно, запрашиваемые данные отсутствуют на сервере. <br>${error.message}`;
+      errorField.innerHTML = `Запрос отклонён. Вероятно, запрашиваемые данные отсутствуют или сервер временно недоступен. <br>${error.message}`;
       resultField.textContent = "";
     })
     .finally(function () {
