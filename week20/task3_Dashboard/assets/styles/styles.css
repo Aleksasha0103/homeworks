@@ -1,0 +1,79 @@
+html {
+  background-color: #f4f2ea;
+}
+
+.main-part {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.main-part__title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: #373739;
+  margin-bottom: 50px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+.chart-js-container,
+.highcharts-js-container,
+.chartist-js-container {
+  max-width: 45%;
+}
+
+.chartist-js-container {
+  margin: 50px auto;
+  width: 100%;
+}
+
+.ct-chart {
+  position: relative;
+  text-align: center;
+  height: 350px;
+  width: 100%;
+}
+
+.axis-label {
+  font-size: 18px;
+}
+
+.box-legend-container {
+  margin-top: 20px;
+}
+
+.box1,
+.box2,
+.box3 {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: #d70206;
+  border: 3px solid #d70206;
+}
+
+.box1 {
+  margin-top: 20px;
+}
+
+.box2 {
+  background-color: #f05b4f;
+  border: 3px solid #f05b4f;
+}
+
+.box3 {
+  background-color: #f4c63d;
+  border: 3px solid #f4c63d;
+}
+
+.legend {
+  display: inline-block;
+  font-size: 18px;
+}
