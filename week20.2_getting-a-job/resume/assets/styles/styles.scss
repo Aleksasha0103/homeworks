@@ -1,0 +1,128 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "mixins";
+
+html {
+  background: $background-gradient;
+  font-family: $roboto;
+}
+
+.header {
+  @include flex-row-wrap;
+  margin: 23px 65px 0px 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: $light-gray;
+}
+
+.header__logo__dark {
+  color: $middle-gray;
+}
+
+.header__nav {
+  @include flex-row-wrap;
+  align-items: flex-end;
+}
+
+.header__menu,
+.header__contacts {
+  @include flex-row-wrap;
+  align-items: flex-end;
+  gap: 30px;
+  color: $white;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.header__icon {
+  padding-right: 10px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: $white;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.main {
+  @include flex-row-wrap;
+  margin: 0px 150px;
+}
+
+.text__common {
+  font-weight: 700;
+  font-size: 39px;
+  color: $light-gray;
+}
+
+.about-me {
+  @include flex-column-wrap;
+  margin-bottom: 234px;
+
+  .text__common {
+    margin-top: 223px;
+    margin-bottom: 25px;
+  }
+
+  .text__h1 {
+    font-weight: 700;
+    font-size: 78px;
+    color: $acid-blue;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+  }
+
+  .text__h2 {
+    font-weight: 700;
+    font-size: 57px;
+    color: $light-gray;
+    margin-bottom: 40px;
+  }
+}
+
+.about-me__experience__wrapper {
+  @include flex-row-wrap;
+  gap: 109px;
+}
+
+.about-me__experience {
+  @include flex-row-wrap;
+  align-items: center;
+}
+
+.about-me__experience__figure {
+  font-weight: 700;
+  font-size: 86px;
+  color: $dark-gray;
+  margin-right: 13px;
+}
+
+.about-me__experience__text {
+  font-weight: 400;
+  font-size: 27px;
+  color: $middle-gray;
+  text-transform: uppercase;
+  max-width: 134px;
+}
+
+.longer__text {
+  max-width: 264px;
+}
+
+.footer {
+  @include flex-column-wrap;
+  align-items: center;
+  color: $white;
+  font-weight: 500;
+  font-size: 26px;
+  margin-top: 800px;
+  line-height: 1.4;
+}
