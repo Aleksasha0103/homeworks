@@ -8,6 +8,93 @@ html {
   font-family: $roboto;
 }
 
+.text__h1 {
+  font-weight: 700;
+  font-size: 78px;
+  color: $acid-green;
+  letter-spacing: 15px;
+  margin-bottom: 150px;
+}
+
+.text__h2 {
+  font-weight: 700;
+  font-size: 57px;
+  color: $light-gray;
+  margin-bottom: 40px;
+}
+
+.text__h3 {
+  font-weight: 700;
+  font-size: 49px;
+  color: $acid-green;
+  margin-bottom: 130px;
+}
+
+.text__h4 {
+  font-weight: 400;
+  font-size: 34px;
+  color: $acid-green;
+  margin-bottom: 20px;
+}
+
+.text__position {
+  font-weight: 700;
+  font-size: 26px;
+  color: $light-gray;
+  margin-bottom: 10px;
+}
+
+.text__work-period {
+  font-weight: 300;
+  font-size: 20px;
+  color: $light-gray;
+  margin-bottom: 20px;
+}
+
+.text__common {
+  font-weight: 400;
+  font-size: 24px;
+  color: $light-gray;
+}
+
+.text__education__course-name {
+  font-weight: 400;
+  font-size: 33px;
+  color: $acid-green;
+  margin-bottom: 19px;
+}
+
+.text__education__link {
+  font-weight: 400;
+  font-size: 25px;
+  color: $acid-green;
+  margin-bottom: 19px;
+}
+
+.education__brackets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  font-weight: 700;
+  font-size: 65px;
+  color: $acid-green;
+}
+
+.text__course-info {
+  font-weight: 400;
+  font-size: 33px;
+  color: $white;
+  margin-bottom: 19px;
+}
+
+.text__additional-info {
+  font-weight: 400;
+  font-size: 26px;
+  color: $white;
+  margin-bottom: 10px;
+}
+
 .header {
   @include flex-row-wrap;
   margin: 23px 65px 0px 40px;
@@ -53,39 +140,25 @@ html {
 }
 
 .main {
-  @include flex-row-wrap;
+  @include flex-column-wrap;
   margin: 0px 150px;
 }
 
-.text__common {
-  font-weight: 700;
-  font-size: 39px;
-  color: $light-gray;
-}
-
-.about-me {
+.about-me,
+.stack,
+.projects,
+.experience,
+.education {
   @include flex-column-wrap;
   margin-bottom: 234px;
+}
 
-  .text__common {
-    margin-top: 223px;
-    margin-bottom: 25px;
-  }
-
-  .text__h1 {
-    font-weight: 700;
-    font-size: 78px;
-    color: $acid-blue;
-    letter-spacing: 15px;
-    margin-bottom: 150px;
-  }
-
-  .text__h2 {
-    font-weight: 700;
-    font-size: 57px;
-    color: $light-gray;
-    margin-bottom: 40px;
-  }
+.about-me__text {
+  font-weight: 700;
+  font-size: 39px;
+  color: $white;
+  margin-top: 223px;
+  margin-bottom: 25px;
 }
 
 .about-me__experience__wrapper {
@@ -117,12 +190,143 @@ html {
   max-width: 264px;
 }
 
+.stack__icons__wrapper {
+  @include flex-row-wrap;
+  gap: 90px;
+  margin-bottom: 90px;
+}
+
+.stack__icon {
+  width: 128px;
+  height: 128px;
+}
+
+.projects__container {
+  @include flex-row-wrap;
+  gap: 50px;
+}
+
+.project__box,
+.project__box__text-wrapper {
+  @include flex-row-wrap;
+  width: 486px;
+  height: 400px;
+  border: 2px solid $white;
+  border-radius: 14px;
+}
+
+.project__box {
+  justify-content: center;
+  align-items: center;
+  height: 361px;
+  border: none;
+}
+
+.project__box__text-wrapper:hover,
+.project__box__text-wrapper:active,
+.project__box__text-wrapper:focus {
+  border: 2px solid $acid-green;
+}
+
+.project__box__text {
+  font-weight: 400;
+  font-size: 22px;
+  color: $white;
+  align-self: flex-end;
+  padding: 5px 0 20px 5px;
+}
+
+.projects__link {
+  text-decoration: none;
+  color: $white;
+}
+
+.project__screen {
+  width: 98%;
+  height: 98%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.experience__wrapper {
+  display: grid;
+  grid-template-columns: 45% auto 45%;
+  grid-template-rows: 1 auto 1;
+  overflow: hidden;
+}
+
+.experience__line {
+  grid-column: 2;
+  grid-row: span 4;
+  text-align: center;
+
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.experience__block1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.experience__block2 {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+.experience__block3 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.experience__link {
+  color: $acid-green;
+}
+
+.education__wrapper {
+  @include flex-row-wrap;
+  justify-content: space-between;
+}
+
+.education__container,
+.education__container__additional {
+  @include flex-column-wrap;
+  box-sizing: border-box;
+  width: 60%;
+}
+
+.education__box,
+.education__container__additional {
+  @include flex-row-wrap;
+  justify-content: space-between;
+  background: $dark-gray;
+  padding: 32px 36px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.education__container__additional {
+  width: 35%;
+}
+
+.education__texts {
+  @include flex-column-wrap;
+}
+
+.education__link {
+  color: $acid-green;
+}
+
 .footer {
   @include flex-column-wrap;
   align-items: center;
   color: $white;
   font-weight: 500;
   font-size: 26px;
-  margin-top: 800px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   line-height: 1.4;
 }

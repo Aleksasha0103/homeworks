@@ -17,7 +17,6 @@
           <li>Проекты</li>
           <li>Опыт</li>
           <li>Образование</li>
-          <li>Обо мне</li>
         </ul>
       </nav>
       <div class="header__contacts">
@@ -32,11 +31,20 @@
         <a href="mailto:aleksasha0103@mail.ru" target="_blank" class="header__link">
           <img src="/assets/images/icon_email.svg" class="header__icon" />E-mail</a
         >
+        <!-- <svg class="header__icon">
+          <use href="/assets/images/icons_social-media.svg#i#icon_tg"></use>
+        </svg>
+        <svg class="header__icon">
+          <use href="/assets/images/icons_social-media.svg#icon_github"></use>
+        </svg>
+        <svg class="header__icon">
+          <use href="/assets/images/icons_social-media.svg#icon_email"></use>
+        </svg> -->
       </div>
     </header>
     <main class="main">
       <section class="about-me">
-        <p class="text__common">Username:</p>
+        <p class="about-me__text">Username:</p>
         <h1 class="text__h1">&lt; Александра /&gt;</h1>
         <h2 class="text__h2">Frontend-разработчик</h2>
         <div class="about-me__experience__wrapper">
@@ -47,6 +55,143 @@
           <div class="about-me__experience">
             <p class="about-me__experience__figure">2</p>
             <p class="about-me__experience__text longer__text">учебных проекта реализовано</p>
+          </div>
+        </div>
+      </section>
+      <section class="stack">
+        <h3 class="text__h3">стек()</h3>
+        <div class="stack__icons__wrapper">
+          <img src="/assets/images/icon_stack_html.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_css.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_js.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_typescript.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_react.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_java.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_spring.svg" class="stack__icon" />
+        </div>
+        <div class="stack__icons__wrapper" style="margin-bottom: 0px">
+          <img src="/assets/images/icon_stack_tilda.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_figma.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_bubble.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_unisender.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_bothelp.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_salebot.svg" class="stack__icon" />
+        </div>
+      </section>
+      <section class="projects">
+        <h3 class="text__h3">проекты()</h3>
+        <div class="projects__container">
+          <div class="project__box__text-wrapper">
+            <a href="https://github.com/AlexandraDeeva/1_lucky-cakes" target="_blank" class="projects__link">
+              <div class="project__box">
+                <img src="/assets/images/project_luckycake.ru.jpg" class="project__screen" />
+              </div>
+              <p class="project__box__text">Сайт кондитерской Luckycake</p>
+            </a>
+          </div>
+          <div class="project__box__text-wrapper">
+            <a href="https://github.com/AlexandraDeeva/2_savings-box-app" target="_blank" class="projects__link">
+              <div class="project__box">
+                <img src="/assets/images/project_VTB.jpg" class="project__screen" />
+              </div>
+              <p class="project__box__text">Аналог приложения банка «ВТБ»</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="experience">
+        <h3 class="text__h3">опыт(релевантный, смежный)</h3>
+        <div class="experience__wrapper">
+          <div class="experience__block1">
+            <h4 class="text__h4">Онлайн-институт Smart</h4>
+            <p class="text__position">Технический специалист</p>
+            <p class="text__work-period">август 2021 — настоящее время</p>
+            <p class="text__common">— Размещаю учебные материалы на платформе онлайн-института.</p>
+            <p class="text__common">— Оформляю уроки на платформе с помощью тегов HTML, CSS, JS.</p>
+          </div>
+          <div class="experience__line">
+            <img src="/assets/images/line.svg" />
+          </div>
+          <div class="experience__block2">
+            <h4 class="text__h4">
+              Проект в ITGIRLS для заказчика (<a href="https://luckycake.ru/" target="_blank" class="experience__link"
+                >luckycake.ru</a
+              >)
+            </h4>
+            <p class="text__position">Frontend-разработчик</p>
+            <p class="text__work-period">октябрь 2024</p>
+            <p class="text__common">— Участвовала в создании адаптивного лендинга для кондитерской (HTML, CSS).</p>
+            <p class="text__common">— Использовала библиотеку jQuery (слайдер каталога).</p>
+            <p class="text__common">— Подключала API (Яндекс.Карты).</p>
+            <p class="text__common">— Работала в команде из 5 человек по Agile (Git, GitHub).</p>
+          </div>
+          <div class="experience__block3">
+            <h4 class="text__h4">Promotion Group</h4>
+            <p class="text__position">Оптимизатор</p>
+            <p class="text__work-period">октябрь 2015 — август 2021</p>
+            <p class="text__common">
+              — Редактировала и размещала SEO-тексты на сайтах заказчиков с использованием HTML-тегов, работала с
+              разными CMS и конструкторами: WordPress, Joomla, «Битрикс», CMS.S3, OpenCart, Drupal, MODX, Tilda, Wix и
+              другие.
+            </p>
+            <p class="text__common">
+              — Выполняла мелкие технические работы на сайтах заказчиков, требующие знания базового HTML и SEO,
+              взаимодействие с сервисом Яндекс. Вебмастер.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="education">
+        <h3 class="text__h3">образование(профильное)</h3>
+        <div class="education__wrapper">
+          <div class="education__container">
+            <div class="education__box">
+              <div class="education__texts">
+                <p class="text__education__course-name">Frontend-разработка</p>
+                <p class="text__course-info">2025, Школа программирования ITGIRLSCHOOL</p>
+                <p class="text__course-info">Стек: HTML, CSS, JavaScript, React, TypeScript</p>
+                <p class="text__education__link">
+                  <a href="https://github.com/AlexandraDeeva/1_lucky-cakes" target="_blank" class="education__link"
+                    >Проекты</a
+                  >
+                </p>
+              </div>
+              <div class="education__brackets">{ }</div>
+            </div>
+
+            <div class="education__box">
+              <div class="education__texts">
+                <p class="text__education__course-name">No-Code-разработка</p>
+                <p class="text__course-info">2025, Школа программирования ITGIRLSCHOOL</p>
+                <p class="text__course-info">Стек: Figma, Tilda, Bubble, email-рассылки, чат-боты</p>
+                <p class="text__education__link">
+                  <a
+                    href="https://uchebnye-stranitsy.tilda.ws/developer-portfolio"
+                    target="_blank"
+                    class="education__link"
+                    >Проекты</a
+                  >
+                </p>
+              </div>
+              <div class="education__brackets">&lt; &gt;</div>
+            </div>
+
+            <div class="education__box">
+              <div class="education__texts">
+                <p class="text__education__course-name">Backend-разработка</p>
+                <p class="text__course-info">2025, Школа программирования ITGIRLSCHOOL</p>
+                <p class="text__course-info">Стек: Java, Spring, PostgreSQL</p>
+                <p class="text__education__link">Проекты готовятся</p>
+              </div>
+              <div class="education__brackets">[ ]</div>
+            </div>
+          </div>
+          <div class="education__container__additional">
+            <p class="text__additional-info">
+              Также интересуюсь текстами: в 2021 г. прошла онлайн-курс Надежды Сокирской по копирайтингу; в 2023 – 2024
+              гг. — два онлайн-курса корректорского бюро «Ёлки-палки»: «Первая корректура 2.0» и «Вторая корректура».
+              Это позволяет не только работать с кодом, но и создавать грамотное текстовое наполнение сайтов.
+            </p>
           </div>
         </div>
       </section>
