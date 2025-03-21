@@ -52,9 +52,20 @@ body {
   font-style: normal;
   font-display: swap;
 }
+body {
+  min-width: 300px;
+}
+
 html {
   background: linear-gradient(135deg, rgb(39, 39, 39) 44%, rgb(73, 73, 73) 100%, rgb(114, 114, 114) 100%);
   font-family: "Roboto", sans-serif;
+}
+
+.nav__link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
 }
 
 .text__h1 {
@@ -124,7 +135,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10%;
+  width: 5%;
   font-weight: 700;
   font-size: 65px;
   color: #70ff00;
@@ -132,16 +143,27 @@ html {
 
 .text__course-info {
   font-weight: 400;
-  font-size: 33px;
+  font-size: 30px;
   color: #ffffff;
   margin-bottom: 19px;
 }
 
-.text__additional-info {
+.text__additional-info,
+.text__additional-info__list {
   font-weight: 400;
   font-size: 26px;
   color: #ffffff;
   margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.text__additional-info__list li {
+  list-style-type: circle;
+  margin-bottom: 15px;
+}
+
+.green-highlight {
+  color: #70ff00;
 }
 
 .header {
@@ -322,7 +344,6 @@ html {
   display: grid;
   grid-template-columns: 45% auto 45%;
   grid-template-rows: 1 auto 1;
-  overflow: hidden;
 }
 
 .experience__line {
@@ -363,8 +384,7 @@ html {
   justify-content: space-between;
 }
 
-.education__container,
-.education__container__additional {
+.education__container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -377,11 +397,14 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   background: #4f4f4f;
   padding: 32px 36px;
   box-sizing: border-box;
   margin-bottom: 10px;
+}
+
+.education__box {
+  justify-content: space-between;
 }
 
 .education__container__additional {
@@ -409,4 +432,15 @@ html {
   margin-top: 60px;
   margin-bottom: 60px;
   line-height: 1.4;
+}
+
+.icon-top {
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  top: auto;
+  bottom: 20px;
+  right: 10px;
+  left: auto;
+  scroll-behavior: smooth;
 }

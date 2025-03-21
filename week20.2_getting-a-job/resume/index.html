@@ -13,23 +13,23 @@
       <div class="header__logo"><span class="header__logo__dark">Frontend</span>Developer</div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li>Стек</li>
-          <li>Проекты</li>
-          <li>Опыт</li>
-          <li>Образование</li>
+          <li><a class="nav__link" href="#stack">Стек</a></li>
+          <li><a class="nav__link" href="#projects">Проекты</a></li>
+          <li><a class="nav__link" href="#experience">Опыт</a></li>
+          <li><a class="nav__link" href="#education">Образование</a></li>
         </ul>
       </nav>
       <div class="header__contacts">
         <a href="https://t.me/aleksasha0103" target="_blank" class="header__link">
-          <img src="/assets/images/icon_tg.svg" class="header__icon" />Telegram</a
+          <img src="/assets/images/icon_tg.svg" class="header__icon" alt="Telegram" />Telegram</a
         >
 
         <a href="https://github.com/AlexandraDeeva" target="_blank" class="header__link">
-          <img src="/assets/images/icon_github.svg" class="header__icon" />GitHub</a
+          <img src="/assets/images/icon_github.svg" class="header__icon" alt="GitHub" />GitHub</a
         >
 
         <a href="mailto:aleksasha0103@mail.ru" target="_blank" class="header__link">
-          <img src="/assets/images/icon_email.svg" class="header__icon" />E-mail</a
+          <img src="/assets/images/icon_email.svg" class="header__icon" alt="E-mail" />E-mail</a
         >
         <!-- <svg class="header__icon">
           <use href="/assets/images/icons_social-media.svg#i#icon_tg"></use>
@@ -58,33 +58,33 @@
           </div>
         </div>
       </section>
-      <section class="stack">
+      <section class="stack" id="stack">
         <h3 class="text__h3">стек()</h3>
         <div class="stack__icons__wrapper">
-          <img src="/assets/images/icon_stack_html.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_css.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_js.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_typescript.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_react.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_java.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_spring.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_html.svg" class="stack__icon" alt="HTML" />
+          <img src="/assets/images/icon_stack_css.svg" class="stack__icon" alt="CSS" />
+          <img src="/assets/images/icon_stack_js.svg" class="stack__icon" alt="JavaScript" />
+          <img src="/assets/images/icon_stack_typescript.svg" class="stack__icon" alt="TypeScript" />
+          <img src="/assets/images/icon_stack_react.svg" class="stack__icon" alt="React" />
+          <img src="/assets/images/icon_stack_java.svg" class="stack__icon" alt="Java" />
+          <img src="/assets/images/icon_stack_spring.svg" class="stack__icon" alt="Spring" />
         </div>
         <div class="stack__icons__wrapper" style="margin-bottom: 0px">
-          <img src="/assets/images/icon_stack_tilda.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_figma.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_bubble.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_unisender.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_bothelp.svg" class="stack__icon" />
-          <img src="/assets/images/icon_stack_salebot.svg" class="stack__icon" />
+          <img src="/assets/images/icon_stack_tilda.svg" class="stack__icon" alt="Tilda" />
+          <img src="/assets/images/icon_stack_figma.svg" class="stack__icon" alt="Figma" />
+          <img src="/assets/images/icon_stack_bubble.svg" class="stack__icon" alt="Bubble" />
+          <img src="/assets/images/icon_stack_unisender.svg" class="stack__icon" alt="Unisender" />
+          <img src="/assets/images/icon_stack_bothelp.svg" class="stack__icon" alt="BotHelp" />
+          <img src="/assets/images/icon_stack_salebot.svg" class="stack__icon" alt="SaleBot" />
         </div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <h3 class="text__h3">проекты()</h3>
         <div class="projects__container">
           <div class="project__box__text-wrapper">
             <a href="https://github.com/AlexandraDeeva/1_lucky-cakes" target="_blank" class="projects__link">
               <div class="project__box">
-                <img src="/assets/images/project_luckycake.ru.jpg" class="project__screen" />
+                <img src="/assets/images/project_luckycake.ru.jpg" class="project__screen" alt="Проект luckycake.ru" />
               </div>
               <p class="project__box__text">Сайт кондитерской Luckycake</p>
             </a>
@@ -92,14 +92,18 @@
           <div class="project__box__text-wrapper">
             <a href="https://github.com/AlexandraDeeva/2_savings-box-app" target="_blank" class="projects__link">
               <div class="project__box">
-                <img src="/assets/images/project_VTB.jpg" class="project__screen" />
+                <img
+                  src="/assets/images/project_VTB.jpg"
+                  class="project__screen"
+                  alt="Проект-аналог приложения «ВТБ-банка»"
+                />
               </div>
               <p class="project__box__text">Аналог приложения банка «ВТБ»</p>
             </a>
           </div>
         </div>
       </section>
-      <section class="experience">
+      <section class="experience" id="experience">
         <h3 class="text__h3">опыт(релевантный, смежный)</h3>
         <div class="experience__wrapper">
           <div class="experience__block1">
@@ -110,7 +114,7 @@
             <p class="text__common">— Оформляю уроки на платформе с помощью тегов HTML, CSS, JS.</p>
           </div>
           <div class="experience__line">
-            <img src="/assets/images/line.svg" />
+            <img src="/assets/images/line.svg" alt="Линия с точками карьеры" />
           </div>
           <div class="experience__block2">
             <h4 class="text__h4">
@@ -141,7 +145,7 @@
           </div>
         </div>
       </section>
-      <section class="education">
+      <section class="education" id="education">
         <h3 class="text__h3">образование(профильное)</h3>
         <div class="education__wrapper">
           <div class="education__container">
@@ -149,21 +153,25 @@
               <div class="education__texts">
                 <p class="text__education__course-name">Frontend-разработка</p>
                 <p class="text__course-info">2025, Школа программирования ITGIRLSCHOOL</p>
-                <p class="text__course-info">Стек: HTML, CSS, JavaScript, React, TypeScript</p>
+                <p class="text__course-info">
+                  <span class="green-highlight">Стек:</span> HTML, CSS, JavaScript, React, TypeScript
+                </p>
                 <p class="text__education__link">
                   <a href="https://github.com/AlexandraDeeva/1_lucky-cakes" target="_blank" class="education__link"
                     >Проекты</a
                   >
                 </p>
               </div>
-              <div class="education__brackets">{ }</div>
+              <div class="education__brackets">{&nbsp;}</div>
             </div>
 
             <div class="education__box">
               <div class="education__texts">
                 <p class="text__education__course-name">No-Code-разработка</p>
                 <p class="text__course-info">2025, Школа программирования ITGIRLSCHOOL</p>
-                <p class="text__course-info">Стек: Figma, Tilda, Bubble, email-рассылки, чат-боты</p>
+                <p class="text__course-info">
+                  <span class="green-highlight">Стек:</span> Figma, Tilda, Bubble, email-рассылки, чат-боты
+                </p>
                 <p class="text__education__link">
                   <a
                     href="https://uchebnye-stranitsy.tilda.ws/developer-portfolio"
@@ -173,24 +181,32 @@
                   >
                 </p>
               </div>
-              <div class="education__brackets">&lt; &gt;</div>
+              <div class="education__brackets">&lt;&nbsp;&gt;</div>
             </div>
 
             <div class="education__box">
               <div class="education__texts">
                 <p class="text__education__course-name">Backend-разработка</p>
                 <p class="text__course-info">2025, Школа программирования ITGIRLSCHOOL</p>
-                <p class="text__course-info">Стек: Java, Spring, PostgreSQL</p>
+                <p class="text__course-info"><span class="green-highlight">Стек:</span> Java, Spring, PostgreSQL</p>
                 <p class="text__education__link">Проекты готовятся</p>
               </div>
-              <div class="education__brackets">[ ]</div>
+              <div class="education__brackets">[&nbsp;]</div>
             </div>
           </div>
           <div class="education__container__additional">
+            <p class="text__education__course-name">Также интересуюсь текстами:</p>
+            <ul class="text__additional-info__list">
+              <li>в 2021 г. прошла онлайн-курс Надежды Сокирской по копирайтингу;</li>
+              <li>
+                в 2023 – 2024 гг. — два онлайн-курса корректорского бюро «Ёлки-палки»: «Первая корректура 2.0» и «Вторая
+                корректура».
+              </li>
+            </ul>
             <p class="text__additional-info">
-              Также интересуюсь текстами: в 2021 г. прошла онлайн-курс Надежды Сокирской по копирайтингу; в 2023 – 2024
-              гг. — два онлайн-курса корректорского бюро «Ёлки-палки»: «Первая корректура 2.0» и «Вторая корректура».
-              Это позволяет не только работать с кодом, но и создавать грамотное текстовое наполнение сайтов.
+              Эти знания позволяют лучше видеть взаимосвязь фронтенда и бэкенда, использовать дополнительные инструменты
+              в работе над сайтами и приложениями, а также создавать грамотное текстовое наполнение. Тем не менее,
+              больше всего меня привлекает фронтенд, более глубоко хотела бы погрузиться именно в эту область.
             </p>
           </div>
         </div>
@@ -199,6 +215,9 @@
     <footer class="footer">
       <p>&#169; Frontend-разработчик Деева Александра</p>
       <p>2025</p>
+      <a href="#" id="icon-top" class="icon-top"
+        ><img class="icon-top" src="/assets/images/icon_top.svg" alt="Кнопка наверх"
+      /></a>
     </footer>
     <script src="/assets/scripts/main.js"></script>
   </body>
