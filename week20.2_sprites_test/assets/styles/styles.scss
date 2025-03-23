@@ -1,0 +1,33 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "mixins";
+
+body {
+  min-width: 300px;
+}
+
+html {
+  background: $background-gradient;
+  font-family: $roboto;
+}
+
+.header {
+  @include flex-row-wrap;
+  margin: 23px 65px 0px 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header__contacts {
+  @include flex-row-wrap;
+  align-items: flex-end;
+  gap: 30px;
+  color: $white;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.header__icon {
+  padding-right: 10px;
+}

@@ -1,0 +1,86 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Light.eot") format("embedded-opentype"), url("/assets/fonts/Roboto-Light.woff2") format("woff2"), url("/assets/fonts/Roboto-Light.woff") format("woff"), url("/assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Regular.eot") format("embedded-opentype"), url("/assets/fonts/Roboto-Regular.woff2") format("woff2"), url("/assets/fonts/Roboto-Regular.woff") format("woff"), url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Medium.eot") format("embedded-opentype"), url("/assets/fonts/Roboto-Medium.woff2") format("woff2"), url("/assets/fonts/Roboto-Medium.woff") format("woff"), url("/assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto-Bold.eot") format("embedded-opentype"), url("/assets/fonts/Roboto-Bold.woff2") format("woff2"), url("/assets/fonts/Roboto-Bold.woff") format("woff"), url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  min-width: 300px;
+}
+
+html {
+  background: linear-gradient(135deg, rgb(39, 39, 39) 44%, rgb(73, 73, 73) 100%, rgb(114, 114, 114) 100%);
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 23px 65px 0px 40px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.header__icon {
+  padding-right: 10px;
+}
