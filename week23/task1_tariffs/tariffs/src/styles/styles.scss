@@ -1,0 +1,102 @@
+@import "mixins";
+@import "colors";
+
+body {
+  background: $light-grey-background;
+  padding: 50px;
+}
+
+.tariffCards {
+  @include flex-row-wrap;
+  justify-content: center;
+}
+
+.CardItem {
+  @include flex-column-wrap;
+  width: 300px;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+
+  &.red {
+    box-shadow: 0px 10px 15px 3px #dddddd, 0px -10px 15px 3px #dddddd;
+    z-index: 1;
+  }
+}
+
+.titleContainer,
+.priceContainer,
+.speedContainer,
+.footerInfoContainer {
+  padding: 5px;
+  border: 1px solid #ffffff;
+}
+
+.titleContainer {
+  &.blue {
+    background-color: $dark-blue-title;
+  }
+
+  &.green {
+    background-color: $dark-green-title;
+  }
+
+  &.red {
+    background-color: $dark-red-title;
+    margin-top: -10px;
+    padding: 15px 5px;
+  }
+
+  &.black {
+    background-color: $dark-black-title;
+  }
+}
+
+.tariffTitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: $white;
+}
+
+.priceContainer {
+  &.blue {
+    background-color: $blue-price;
+  }
+
+  &.green {
+    background-color: $green-price;
+  }
+
+  &.red {
+    background-color: $red-price;
+  }
+
+  &.black {
+    background-color: $black-price;
+  }
+}
+
+.tariffPrice {
+  color: $white;
+  font-size: 50px;
+}
+
+.upperPrice,
+.underPrice {
+  color: $white;
+  font-size: 16px;
+}
+
+.speedContainer {
+  color: $grey-speed;
+}
+
+.tariffSpeed,
+.tariffFooterInfo {
+  font-size: 18px;
+  color: $grey-text;
+}
+
+.footerInfoContainer {
+  background-color: $dark-grey-info;
+}
