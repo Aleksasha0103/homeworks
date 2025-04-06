@@ -1,0 +1,157 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin shadows {
+  box-shadow: 0 0 4px 1px $grey-text;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 7px 2px $grey-text;
+  }
+}
+
+@mixin shadows-large {
+  box-shadow: 0 0 7px 1px $grey-text;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 7px 2px $grey-text;
+  }
+}
+
+body {
+  padding: 0px 20px;
+}
+
+.commonParagraph {
+  margin: 2px 0 0 0;
+}
+
+//Хедер
+.headerBlock {
+  @include flex-row-wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.headerButton {
+  @include button-header;
+  @include common-text;
+  @include shadows;
+  background-color: $green;
+  color: $white;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+// Выбор языка и контейнер карточек
+.LanguageChoiceContainer,
+.LanguageCardButtonsContainer {
+  @include flex-row-wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.languageChoiceButton {
+  @include language-choice-button;
+  @include common-text;
+  @include shadows;
+  border: none;
+  cursor: pointer;
+  background-color: $light-blue;
+  color: $black;
+}
+
+// Карточки
+.cardContainer {
+  @include flex-row-wrap;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.card {
+  @include card-item;
+  @include common-text;
+  @include shadows-large;
+  background-color: $white;
+}
+.unknownWordsButton,
+.knownWordsButton,
+.allWordsButton {
+  @include language-action-button;
+  @include common-text;
+  @include shadows;
+  border: none;
+  cursor: pointer;
+  color: $white;
+}
+
+.knownWordsButton {
+  background-color: $green;
+}
+
+.unknownWordsButton {
+  background-color: $red;
+}
+
+.allWordsButton {
+  @include button-long;
+  background-color: $light-blue;
+  color: $black;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+// Список слов
+.wordsListTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $white;
+  border: 1px solid $grey-text;
+}
+
+.buttonSave {
+  @include button-icon-long;
+  display: inline;
+  background-color: $green;
+  background-image: url("../assets/images/icon-check.svg");
+  color: $white;
+}
+
+.buttonEdit {
+  @include button-icon;
+  display: inline;
+  background-color: $orange;
+  background-image: url("../assets/images/icon-pencil.svg");
+}
+
+.buttonDelete {
+  @include button-icon;
+  display: inline;
+  background-color: $red;
+  background-image: url("../assets/images/icon-trash.svg");
+}
+
+//Футер
+.footerBlock {
+  @include flex-column-wrap;
+  justify-content: center;
+  margin-top: 90px;
+}

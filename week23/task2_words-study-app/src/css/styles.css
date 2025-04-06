@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Regular.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Regular.woff") format("woff"), url("../assets/fonts/Inter18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Medium.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Medium.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Medium.woff") format("woff"), url("../assets/fonts/Inter18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-SemiBold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-SemiBold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-SemiBold.woff") format("woff"), url("../assets/fonts/Inter18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Bold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Bold.woff") format("woff"), url("../assets/fonts/Inter18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Black.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Black.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Black.woff") format("woff"), url("../assets/fonts/Inter18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Regular.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Regular.woff") format("woff"), url("../assets/fonts/Inter18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Medium.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Medium.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Medium.woff") format("woff"), url("../assets/fonts/Inter18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-SemiBold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-SemiBold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-SemiBold.woff") format("woff"), url("../assets/fonts/Inter18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Bold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Bold.woff") format("woff"), url("../assets/fonts/Inter18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Black.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Black.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Black.woff") format("woff"), url("../assets/fonts/Inter18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  padding: 0px 20px;
+}
+
+.commonParagraph {
+  margin: 2px 0 0 0;
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.headerButton {
+  width: 150px;
+  height: 42px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 4px 1px #5c5150;
+  background-color: #53b75b;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.headerButton:hover, .headerButton:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.LanguageChoiceContainer,
+.LanguageCardButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.languageChoiceButton {
+  width: 130px;
+  height: 44px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 4px 1px #5c5150;
+  border: none;
+  cursor: pointer;
+  background-color: #a4c9ff;
+  color: #313030;
+}
+.languageChoiceButton:hover, .languageChoiceButton:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.card {
+  width: 500px;
+  height: 300px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 7px 1px #5c5150;
+  background-color: #ffffff;
+}
+.card:hover, .card:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.unknownWordsButton,
+.knownWordsButton,
+.allWordsButton {
+  width: 150px;
+  height: 46px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 4px 1px #5c5150;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.unknownWordsButton:hover, .unknownWordsButton:focus,
+.knownWordsButton:hover,
+.knownWordsButton:focus,
+.allWordsButton:hover,
+.allWordsButton:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.knownWordsButton {
+  background-color: #53b75b;
+}
+
+.unknownWordsButton {
+  background-color: #c73838;
+}
+
+.allWordsButton {
+  width: 200px;
+  height: 46px;
+  border-radius: 6px;
+  background-color: #a4c9ff;
+  color: #313030;
+}
+.allWordsButton a {
+  text-decoration: none;
+  color: #313030;
+}
+
+.wordsListTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #5c5150;
+}
+
+.buttonSave {
+  width: 60px;
+  height: 26px;
+  border-radius: 10px;
+  display: inline;
+  background-color: #53b75b;
+  background-image: url("../assets/images/icon-check.svg");
+  color: #ffffff;
+}
+
+.buttonEdit {
+  width: 29px;
+  height: 26px;
+  border-radius: 10px;
+  display: inline;
+  background-color: #ec9215;
+  background-image: url("../assets/images/icon-pencil.svg");
+}
+
+.buttonDelete {
+  width: 29px;
+  height: 26px;
+  border-radius: 10px;
+  display: inline;
+  background-color: #c73838;
+  background-image: url("../assets/images/icon-trash.svg");
+}
+
+.footerBlock {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 90px;
+}
