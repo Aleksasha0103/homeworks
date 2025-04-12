@@ -1,41 +1,26 @@
 import React from "react";
 import CardItem from "./CardItem";
+import tariifsData from "../data/tariffsData";
 import "../styles/styles.scss";
 
-function TariffCards() {
+const TariffCards = () => {
+  const desireOrder = [300, 450, 500, 1000];
+  const sortedTariffsData = desireOrder.map((id) => tariifsData.find((tariff) => tariff.id === id));
   return (
     <section className="tariffCards">
-      <CardItem
-        titleContainerColor="blue"
-        priceContainerColor="blue"
-        tariffTitle="Безлимитный 300"
-        tariffPrice="300"
-        tariffSpeed="10"
-      />
-      <CardItem
-        titleContainerColor="green"
-        priceContainerColor="green"
-        tariffTitle="Безлимитный 450"
-        tariffPrice="450"
-        tariffSpeed="50"
-      />
-      <CardItem
-        CardItemColor="red"
-        titleContainerColor="red"
-        priceContainerColor="red"
-        tariffTitle="Безлимитный 500"
-        tariffPrice="550"
-        tariffSpeed="100"
-      />
-      <CardItem
-        titleContainerColor="black"
-        priceContainerColor="black"
-        tariffTitle="Безлимитный 1000"
-        tariffPrice="1000"
-        tariffSpeed="200"
-      />
+      {sortedTariffsData.map((tariff) => (
+        <CardItem
+          key={tariff.id}
+          cardItemColor={tariff.cardItemColor}
+          titleContainerColor={tariff.titleContainerColor}
+          priceContainerColor={tariff.priceContainerColor}
+          tariffTitle={tariff.tariffTitle}
+          tariffPrice={tariff.tariffPrice}
+          tariffSpeed={tariff.tariffSpeed}
+        />
+      ))}
     </section>
   );
-}
+};
 
 export default TariffCards;
