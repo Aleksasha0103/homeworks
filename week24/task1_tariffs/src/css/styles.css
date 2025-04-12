@@ -1,0 +1,102 @@
+body {
+  background: #fafafa;
+  padding: 50px;
+}
+
+.tariffCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardItemCommon,
+.cardItemHighlighted {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+}
+
+.cardItemHighlighted {
+  box-shadow: 0px 10px 15px 3px #dddddd, 0px -10px 15px 3px #dddddd;
+  z-index: 1;
+}
+
+.titleContainer,
+.titleContainerHighlighted,
+.priceContainer,
+.speedContainer,
+.footerInfoContainer {
+  padding: 5px;
+  border: 1px solid #ffffff;
+}
+
+.titleContainer.blue,
+.titleContainerHighlighted.blue {
+  background-color: #219cab;
+}
+.titleContainer.green,
+.titleContainerHighlighted.green {
+  background-color: #1c8b72;
+}
+.titleContainer.red,
+.titleContainerHighlighted.red {
+  background-color: #c4554e;
+}
+.titleContainer.black,
+.titleContainerHighlighted.black {
+  background-color: #282f37;
+}
+
+.titleContainerHighlighted {
+  margin-top: -10px;
+  padding: 15px 5px;
+}
+
+.tariffTitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.priceContainer.blue {
+  background-color: #2cc1d5;
+}
+.priceContainer.green {
+  background-color: #24ae8d;
+}
+.priceContainer.red {
+  background-color: #f46a5f;
+}
+.priceContainer.black {
+  background-color: #333a44;
+}
+
+.tariffPrice {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.upperPrice,
+.underPrice {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.speedContainer {
+  color: #f8f8f8;
+}
+
+.tariffSpeed,
+.tariffFooterInfo {
+  font-size: 18px;
+  color: #969695;
+}
+
+.footerInfoContainer {
+  background-color: #eeeeee;
+}
