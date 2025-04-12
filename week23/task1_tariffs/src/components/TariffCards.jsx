@@ -11,7 +11,7 @@ const TariffCards = () => {
       {sortedTariffsData.map((tariff) => (
         <CardItem
           key={tariff.id}
-          cardItemColor={tariff.cardItemColor}
+          cardItemhighlight={tariff.cardItemhighlight}
           titleContainerColor={tariff.titleContainerColor}
           priceContainerColor={tariff.priceContainerColor}
           tariffTitle={tariff.tariffTitle}

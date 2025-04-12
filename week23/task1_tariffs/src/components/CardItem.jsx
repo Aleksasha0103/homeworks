@@ -2,9 +2,9 @@ import "../styles/styles.scss";
 
 function CardItem(props) {
   const { cardItemhighlight, titleContainerColor, tariffTitle, priceContainerColor, tariffPrice, tariffSpeed } = props;
-  let ifHighlight = cardItemhighlight ? `CardItem ${cardItemhighlight}` : `CardItem`;
+  let ifHighlight = cardItemhighlight ? `cardItemhighlighted` : `cardItemCommon`;
   return (
-    <section className={ifHighlight}>
+    <section className={`${ifHighlight}`}>
       <div className={`titleContainer ${titleContainerColor}`}>
         <h2 className="tariffTitle">{tariffTitle}</h2>
       </div>

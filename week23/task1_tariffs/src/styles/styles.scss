@@ -11,17 +11,18 @@ body {
   justify-content: center;
 }
 
-.CardItem {
+.cardItemCommon,
+.cardItemhighlighted {
   @include flex-column-wrap;
   width: 300px;
   text-align: center;
   font-size: 20px;
   position: relative;
+}
 
-  &.red {
-    box-shadow: 0px 10px 15px 3px #dddddd, 0px -10px 15px 3px #dddddd;
-    z-index: 1;
-  }
+.cardItemhighlighted {
+  box-shadow: 0px 10px 15px 3px #dddddd, 0px -10px 15px 3px #dddddd;
+  z-index: 1;
 }
 
 .titleContainer,

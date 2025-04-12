@@ -19,7 +19,7 @@ const tariffsData = [
 
   {
     id: 500,
-    cardItemhighlight: "true",
+    cardItemhighlight: true,
     titleContainerColor: "red",
     priceContainerColor: "red",
     tariffTitle: "Безлимитный 500",

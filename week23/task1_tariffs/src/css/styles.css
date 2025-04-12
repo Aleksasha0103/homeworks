@@ -10,7 +10,8 @@ body {
   justify-content: center;
 }
 
-.cardItem {
+.cardItemCommon,
+.cardItemhighlighted {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -20,7 +21,7 @@ body {
   position: relative;
 }
 
-.cardItem.cardItemhighlight {
+.cardItemhighlighted {
   box-shadow: 0px 10px 15px 3px #dddddd, 0px -10px 15px 3px #dddddd;
   z-index: 1;
 }
