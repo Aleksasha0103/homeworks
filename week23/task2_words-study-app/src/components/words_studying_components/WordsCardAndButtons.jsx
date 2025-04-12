@@ -5,12 +5,10 @@ import "../../styles/styles.scss";
 
 function WordsCardAndButtons() {
   return (
-    <React.Fragment>
-      <section className="WordsCardAndButtons">
-        <CardItem />
-        <LanguageCardButtons />
-      </section>
-    </React.Fragment>
+    <section className="WordsCardAndButtons">
+      <CardItem />
+      <LanguageCardButtons />
+    </section>
   );
 }
 
