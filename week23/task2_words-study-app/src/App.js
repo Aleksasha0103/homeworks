@@ -16,7 +16,7 @@ function App() {
         <LanguageChoice />
         <Routes>
           <Route path="/" element={<WordsCardAndButtons />} />
-          <Route path="/words-list" element={<WordsList />} />
+          <Route path="/WordsList" element={<WordsList />} />
         </Routes>
         <Footer />
       </div>

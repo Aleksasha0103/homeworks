@@ -197,38 +197,116 @@ body {
 }
 
 .wordsListTable {
-  width: 100%;
-  border-collapse: collapse;
+  width: 90%;
   background-color: #ffffff;
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+.wordsListTable th,
+.wordsListTable td {
   border: 1px solid #5c5150;
+  padding: 5px 5px;
+}
+.wordsListTable td {
+  text-align: left;
+  width: 19.5%;
+}
+.wordsListTable td:first-child {
+  width: 3%;
+}
+.wordsListTable td:last-child {
+  width: 18%;
+  text-align: right;
+}
+.wordsListTable input {
+  border: none;
 }
 
-.buttonSave {
-  width: 60px;
+.rosy {
+  background-color: #f1dedf;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.buttonSave,
+.buttonCancel {
+  width: 30px;
   height: 26px;
-  border-radius: 10px;
-  display: inline;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 107px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
   background-color: #53b75b;
   background-image: url("../assets/images/icon-check.svg");
   color: #ffffff;
+  padding-left: 33px;
+  background-position: 10px;
+}
+.buttonSave:hover, .buttonSave:focus,
+.buttonCancel:hover,
+.buttonCancel:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
+}
+
+.buttonCancel {
+  background-color: #c73838;
+  background-image: url("../assets/images/icon-cancel.svg");
 }
 
 .buttonEdit {
-  width: 29px;
+  width: 30px;
   height: 26px;
-  border-radius: 10px;
-  display: inline;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
   background-color: #ec9215;
   background-image: url("../assets/images/icon-pencil.svg");
 }
+.buttonEdit:hover, .buttonEdit:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
+}
 
 .buttonDelete {
-  width: 29px;
+  width: 30px;
   height: 26px;
-  border-radius: 10px;
-  display: inline;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
   background-color: #c73838;
   background-image: url("../assets/images/icon-trash.svg");
+  margin-right: 0px;
+}
+.buttonDelete:hover, .buttonDelete:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
 }
 
 .footerBlock {
@@ -237,4 +315,5 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 90px;
+  margin-bottom: 1900px;
 }

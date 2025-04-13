@@ -32,6 +32,28 @@
   }
 }
 
+@mixin shadows-icons {
+  box-shadow: inset 0 0 1px 1px $grey-text;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 3px 2px $grey-text;
+  }
+}
+
+@mixin buttons-icons {
+  @include button-icon;
+  @include shadows-icons;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
 body {
   padding: 0px 20px;
 }
@@ -89,6 +111,7 @@ body {
   @include shadows-large;
   background-color: $white;
 }
+
 .unknownWordsButton,
 .knownWordsButton,
 .allWordsButton {
@@ -121,32 +144,74 @@ body {
 
 // Список слов
 .wordsListTable {
-  width: 100%;
-  border-collapse: collapse;
+  width: 90%;
   background-color: $white;
-  border: 1px solid $grey-text;
+  border-collapse: collapse;
+  margin: 30px auto;
+
+  th,
+  td {
+    border: 1px solid $grey-text;
+    padding: 5px 5px;
+  }
+
+  td {
+    text-align: left;
+    width: 19.5%;
+  }
+
+  td:first-child {
+    width: 3%;
+  }
+
+  td:last-child {
+    width: 18%;
+    text-align: right;
+  }
+
+  input {
+    border: none;
+  }
 }
 
-.buttonSave {
+.rosy {
+  background-color: $rosy;
+}
+
+.white {
+  background-color: $white;
+}
+
+.buttonSave,
+.buttonCancel {
+  @include buttons-icons;
   @include button-icon-long;
-  display: inline;
   background-color: $green;
   background-image: url("../assets/images/icon-check.svg");
   color: $white;
+  padding-left: 33px;
+  background-position: 10px;
+  // visibility: hidden;
+}
+
+.buttonCancel {
+  background-color: $red;
+  background-image: url("../assets/images/icon-cancel.svg");
+  // visibility: visible;
+  // display: none;
 }
 
 .buttonEdit {
-  @include button-icon;
-  display: inline;
+  @include buttons-icons;
   background-color: $orange;
   background-image: url("../assets/images/icon-pencil.svg");
 }
 
 .buttonDelete {
-  @include button-icon;
-  display: inline;
+  @include buttons-icons;
   background-color: $red;
   background-image: url("../assets/images/icon-trash.svg");
+  margin-right: 0px;
 }
 
 //Футер
@@ -154,4 +219,5 @@ body {
   @include flex-column-wrap;
   justify-content: center;
   margin-top: 90px;
+  margin-bottom: 1900px;
 }
