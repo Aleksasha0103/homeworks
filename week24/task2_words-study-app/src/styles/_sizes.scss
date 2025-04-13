@@ -1,0 +1,46 @@
+@import "colors";
+@import "fonts";
+
+@mixin button-icon-long {
+  width: 107px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+}
+
+@mixin button-icon {
+  width: 30px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+}
+
+@mixin button-header {
+  width: 150px;
+  height: 42px;
+  border-radius: 6px;
+}
+
+@mixin language-choice-button {
+  width: 130px;
+  height: 44px;
+  border-radius: 6px;
+}
+
+@mixin language-action-button {
+  width: 150px;
+  height: 46px;
+  border-radius: 6px;
+}
+
+@mixin button-long {
+  width: 200px;
+  height: 46px;
+  border-radius: 6px;
+}
+
+@mixin card-item {
+  width: 500px;
+  height: 300px;
+  border-radius: 6px;
+}

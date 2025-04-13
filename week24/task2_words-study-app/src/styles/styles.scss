@@ -1,0 +1,255 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin shadows {
+  box-shadow: 0 0 4px 1px $grey-text;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 7px 2px $grey-text;
+  }
+}
+
+@mixin shadows-large {
+  box-shadow: 0 0 7px 1px $grey-text;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 7px 2px $grey-text;
+  }
+}
+
+@mixin shadows-icons {
+  box-shadow: inset 0 0 1px 1px $grey-text;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 3px 2px $grey-text;
+  }
+}
+
+@mixin buttons-icons {
+  @include button-icon;
+  @include shadows-icons;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+body {
+  padding: 0px 20px;
+}
+
+.commonParagraph {
+  margin: 2px 0 0 0;
+}
+
+//Хедер
+.headerBlock {
+  @include flex-row-wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.headerButton {
+  @include button-header;
+  @include common-text;
+  @include shadows;
+  background-color: $green;
+  color: $white;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+// Выбор языка и контейнер карточек
+.LanguageChoiceContainer,
+.LanguageCardButtonsContainer {
+  @include flex-row-wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.languageChoiceButton {
+  @include language-choice-button;
+  @include common-text;
+  @include shadows;
+  border: none;
+  cursor: pointer;
+  background-color: $light-blue;
+  color: $black;
+}
+
+// Карточки
+.cardContainer {
+  @include flex-row-wrap;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.card {
+  @include flex-column-wrap;
+  @include card-item;
+  @include common-text;
+  @include shadows-large;
+  background-color: $white;
+  justify-content: center;
+  align-items: center;
+
+  .cardWord {
+    @include common-text;
+    color: $black;
+  }
+
+  .cardTranscription {
+    @include small-text;
+    color: $grey-text;
+  }
+
+  .cardTranslation {
+    @include small-text;
+    color: $green;
+  }
+}
+
+.buttonCardCheckTranslation {
+  @include button-icon-long;
+  @include shadows-icons;
+  background-color: $green;
+  color: $white;
+  margin-top: 10px;
+  border: none;
+}
+
+.unknownWordsButton,
+.knownWordsButton,
+.allWordsButton {
+  @include language-action-button;
+  @include common-text;
+  @include shadows;
+  border: none;
+  cursor: pointer;
+  color: $white;
+}
+
+.knownWordsButton {
+  background-color: $green;
+}
+
+.unknownWordsButton {
+  background-color: $red;
+}
+
+.allWordsButton {
+  @include button-long;
+  background-color: $light-blue;
+  color: $black;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+// Список слов
+.wordsListTable {
+  width: 90%;
+  background-color: $white;
+  border-collapse: collapse;
+  margin: 30px auto;
+
+  th,
+  td {
+    border: 1px solid $grey-text;
+    padding: 5px 5px;
+  }
+
+  td {
+    text-align: left;
+    width: 19.5%;
+  }
+
+  td:first-child {
+    width: 3%;
+  }
+
+  td:last-child {
+    width: 18%;
+    text-align: right;
+  }
+
+  input {
+    border: none;
+  }
+}
+
+.rosy {
+  background-color: $rosy;
+}
+
+.white {
+  background-color: $white;
+}
+
+.buttonSave,
+.buttonCancel,
+.buttonAddNewWord {
+  @include buttons-icons;
+  @include button-icon-long;
+  background-color: $green;
+  background-image: url("../assets/images/icon-check.svg");
+  color: $white;
+  padding-left: 33px;
+  background-position: 10px;
+}
+
+.buttonCancel {
+  background-color: $red;
+  background-image: url("../assets/images/icon-cancel.svg");
+}
+
+.buttonEdit {
+  @include buttons-icons;
+  background-color: $orange;
+  background-image: url("../assets/images/icon-pencil.svg");
+}
+
+.buttonDelete {
+  @include buttons-icons;
+  background-color: $red;
+  background-image: url("../assets/images/icon-trash.svg");
+  margin-right: 0px;
+}
+
+.buttonAddNewWord {
+  background-image: none;
+  margin-right: 0px;
+  padding: 5px;
+  justify-content: center;
+}
+
+//Футер
+.footerBlock {
+  @include flex-column-wrap;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 1900px;
+}

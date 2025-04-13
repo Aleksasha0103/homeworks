@@ -1,0 +1,368 @@
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Regular.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Regular.woff") format("woff"), url("../assets/fonts/Inter18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Medium.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Medium.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Medium.woff") format("woff"), url("../assets/fonts/Inter18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-SemiBold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-SemiBold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-SemiBold.woff") format("woff"), url("../assets/fonts/Inter18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Bold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Bold.woff") format("woff"), url("../assets/fonts/Inter18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Black.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Black.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Black.woff") format("woff"), url("../assets/fonts/Inter18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Regular.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Regular.woff") format("woff"), url("../assets/fonts/Inter18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Medium.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Medium.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Medium.woff") format("woff"), url("../assets/fonts/Inter18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-SemiBold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-SemiBold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-SemiBold.woff") format("woff"), url("../assets/fonts/Inter18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Bold.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Bold.woff") format("woff"), url("../assets/fonts/Inter18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", san-serif;
+  src: url("../assets/fonts/Inter18pt-Black.eot") format("embedded-opentype"), url("../assets/fonts/Inter18pt-Black.woff2") format("woff2"), url("../assets/fonts/Inter18pt-Black.woff") format("woff"), url("../assets/fonts/Inter18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  padding: 0px 20px;
+}
+
+.commonParagraph {
+  margin: 2px 0 0 0;
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.headerButton {
+  width: 150px;
+  height: 42px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 4px 1px #5c5150;
+  background-color: #53b75b;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.headerButton:hover, .headerButton:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.LanguageChoiceContainer,
+.LanguageCardButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.languageChoiceButton {
+  width: 130px;
+  height: 44px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 4px 1px #5c5150;
+  border: none;
+  cursor: pointer;
+  background-color: #a4c9ff;
+  color: #313030;
+}
+.languageChoiceButton:hover, .languageChoiceButton:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 300px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 7px 1px #5c5150;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover, .card:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+.card .cardWord {
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  color: #313030;
+}
+.card .cardTranscription {
+  font-weight: 400;
+  font-size: 13px;
+  color: #5c5150;
+  color: #5c5150;
+}
+.card .cardTranslation {
+  font-weight: 400;
+  font-size: 13px;
+  color: #5c5150;
+  color: #53b75b;
+}
+
+.buttonCardCheckTranslation {
+  width: 107px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  background-color: #53b75b;
+  color: #ffffff;
+  margin-top: 10px;
+  border: none;
+}
+.buttonCardCheckTranslation:hover, .buttonCardCheckTranslation:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
+}
+
+.unknownWordsButton,
+.knownWordsButton,
+.allWordsButton {
+  width: 150px;
+  height: 46px;
+  border-radius: 6px;
+  font-family: "Inter", san-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #5c5150;
+  box-shadow: 0 0 4px 1px #5c5150;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.unknownWordsButton:hover, .unknownWordsButton:focus,
+.knownWordsButton:hover,
+.knownWordsButton:focus,
+.allWordsButton:hover,
+.allWordsButton:focus {
+  box-shadow: 0 0 7px 2px #5c5150;
+}
+
+.knownWordsButton {
+  background-color: #53b75b;
+}
+
+.unknownWordsButton {
+  background-color: #c73838;
+}
+
+.allWordsButton {
+  width: 200px;
+  height: 46px;
+  border-radius: 6px;
+  background-color: #a4c9ff;
+  color: #313030;
+}
+.allWordsButton a {
+  text-decoration: none;
+  color: #313030;
+}
+
+.wordsListTable {
+  width: 90%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+.wordsListTable th,
+.wordsListTable td {
+  border: 1px solid #5c5150;
+  padding: 5px 5px;
+}
+.wordsListTable td {
+  text-align: left;
+  width: 19.5%;
+}
+.wordsListTable td:first-child {
+  width: 3%;
+}
+.wordsListTable td:last-child {
+  width: 18%;
+  text-align: right;
+}
+.wordsListTable input {
+  border: none;
+}
+
+.rosy {
+  background-color: #f1dedf;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.buttonSave,
+.buttonCancel,
+.buttonAddNewWord {
+  width: 30px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  width: 107px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+  background-color: #53b75b;
+  background-image: url("../assets/images/icon-check.svg");
+  color: #ffffff;
+  padding-left: 33px;
+  background-position: 10px;
+}
+.buttonSave:hover, .buttonSave:focus,
+.buttonCancel:hover,
+.buttonCancel:focus,
+.buttonAddNewWord:hover,
+.buttonAddNewWord:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
+}
+
+.buttonCancel {
+  background-color: #c73838;
+  background-image: url("../assets/images/icon-cancel.svg");
+}
+
+.buttonEdit {
+  width: 30px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #ec9215;
+  background-image: url("../assets/images/icon-pencil.svg");
+}
+.buttonEdit:hover, .buttonEdit:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
+}
+
+.buttonDelete {
+  width: 30px;
+  height: 26px;
+  border-radius: 3px;
+  align-items: center;
+  box-shadow: inset 0 0 1px 1px #5c5150;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #c73838;
+  background-image: url("../assets/images/icon-trash.svg");
+  margin-right: 0px;
+}
+.buttonDelete:hover, .buttonDelete:focus {
+  box-shadow: inset 0 0 3px 2px #5c5150;
+}
+
+.buttonAddNewWord {
+  background-image: none;
+  margin-right: 0px;
+  padding: 5px;
+  justify-content: center;
+}
+
+.footerBlock {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 1900px;
+}
