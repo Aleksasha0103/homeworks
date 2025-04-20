@@ -3,8 +3,8 @@ import "../styles/styles.scss";
 function CardItem(props) {
   const { highlighted, titleContainerColor, tariffTitle, priceContainerColor, tariffPrice, tariffSpeed, onClick } =
     props;
-  let ifHighlightedCardItem = highlighted ? `cardItemHighlighted` : `cardItemCommon`;
-  let ifHighlightedTitleContainer = highlighted ? `titleContainerHighlighted` : `titleContainer`;
+  const ifHighlightedCardItem = highlighted ? `cardItemHighlighted` : `cardItemCommon`;
+  const ifHighlightedTitleContainer = highlighted ? `titleContainerHighlighted` : `titleContainer`;
 
   return (
     <section className={`${ifHighlightedCardItem}`} onClick={onClick}>

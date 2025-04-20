@@ -13,18 +13,21 @@ function TariffCards() {
 
   return (
     <section className="tariffCards">
-      {sortedTariffsData.map((tariff) => (
-        <CardItem
-          key={tariff.id}
-          highlighted={highlightedCardId === tariff.id}
-          titleContainerColor={tariff.titleContainerColor}
-          priceContainerColor={tariff.priceContainerColor}
-          tariffTitle={tariff.tariffTitle}
-          tariffPrice={tariff.tariffPrice}
-          tariffSpeed={tariff.tariffSpeed}
-          onClick={() => handleHighlighted(tariff.id)}
-        />
-      ))}
+      {sortedTariffsData.map((tariff) => {
+        const { id, titleContainerColor, priceContainerColor, tariffTitle, tariffPrice, tariffSpeed } = tariff;
+        return (
+          <CardItem
+            key={id}
+            highlighted={highlightedCardId === id}
+            titleContainerColor={titleContainerColor}
+            priceContainerColor={priceContainerColor}
+            tariffTitle={tariffTitle}
+            tariffPrice={tariffPrice}
+            tariffSpeed={tariffSpeed}
+            onClick={() => handleHighlighted(id)}
+          />
+        );
+      })}
     </section>
   );
 }
