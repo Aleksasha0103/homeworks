@@ -9,33 +9,33 @@ function WordsList() {
   const nextId = vocabulary.length + 1;
 
   //Редактирование строки (при клике по кнопке)
-  let handleEditing = (index) => {
+  const handleEditing = (index) => {
     setEditingIndex(index);
   };
 
   //Изменение данных в инпуте (ввод)
-  let handleInputChange = (index, field, value) => {
-    let updatedInput = [...vocabulary];
+  const handleInputChange = (index, field, value) => {
+    const updatedInput = [...vocabulary];
     updatedInput[index][field] = value;
     setVocabulary(updatedInput);
   };
 
   //Сохранение обновлённого инпута (update)
   const handleSaving = (index, field, value) => {
-    let updatedInput = [...vocabulary];
+    const updatedInput = [...vocabulary];
     updatedInput[index][field] = value;
     setEditingIndex(null);
   };
 
   //Удаление строки со словом
-  let handleDeleting = (index) => {
-    let updatedVocabulary = [...vocabulary];
+  const handleDeleting = (index) => {
+    const updatedVocabulary = [...vocabulary];
     updatedVocabulary.splice(index, 1);
     setVocabulary(updatedVocabulary);
   };
 
   //Добавление нового слова
-  let handleAddingNewWord = () => {
+  const handleAddingNewWord = () => {
     setVocabulary([...vocabulary, { id: nextId, ...newWord }]);
     setNewWord({ english: "", transcription: "", russian: "", tags: "" });
   };

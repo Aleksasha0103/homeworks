@@ -5,8 +5,8 @@ function CardItem(props) {
   const [vocabulary] = useState(props.vocabulary || []);
   const [buttonCardPressed, setButtonCardPressed] = useState(false);
 
-  let randomWordIndex = (vocabulary) => Math.floor(Math.random() * vocabulary.length);
-  let randomWord = (vocabulary) => vocabulary[randomWordIndex];
+  const randomWordIndex = (vocabulary) => Math.floor(Math.random() * vocabulary.length);
+  const randomWord = (vocabulary) => vocabulary[randomWordIndex];
 
   return (
     <div className="cardContainer" onClick={() => setButtonCardPressed(false)}>

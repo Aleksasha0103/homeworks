@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/general_components/Header";
-import LanguageChoice from "./components/words_studying_components/LanguageChoice";
-import WordsCardAndButtons from "./components/words_studying_components/WordsCardAndButtons";
-import Footer from "./components/general_components/Footer";
-import WordsList from "./components/words_studying_components/WordsList";
+import Header from "./components/generalComponents/Header";
+import LanguageChoice from "./components/wordsStudyingComponents/LanguageChoice";
+import WordsCardAndButtons from "./components/wordsStudyingComponents/WordsCardAndButtons";
+import Footer from "./components/generalComponents/Footer";
+import WordsList from "./components/wordsStudyingComponents/WordsList";
 import "./styles/styles.scss";
 
 function App() {
