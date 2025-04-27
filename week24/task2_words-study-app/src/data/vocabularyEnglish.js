@@ -1,10 +1,10 @@
-export let fetchVocabulary = async () => {
+export let fetchVocabularyEnglish = async () => {
   try {
-    const responseVocabulary = await fetch("https://itgirlschool.justmakeit.ru/api/words");
-    if (!responseVocabulary.ok) {
-      throw new Error(`Произошла ошибка подключения к серверу: ${responseVocabulary.status}`);
+    const responseVocabularyEnglish = await fetch("https://itgirlschool.justmakeit.ru/api/words");
+    if (!responseVocabularyEnglish.ok) {
+      throw new Error(`Произошла ошибка подключения к серверу: ${responseVocabularyEnglish.status}`);
     }
-    const dataVocabulary = await responseVocabulary.json();
+    const dataVocabulary = await responseVocabularyEnglish.json();
     return dataVocabulary;
   } catch (error) {
     return [

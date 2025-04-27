@@ -100,8 +100,9 @@ body {
 
 // Карточки
 .cardContainer {
-  @include flex-row-wrap;
+  @include flex-column-wrap;
   justify-content: center;
+  align-items: center;
   margin: 40px 0px;
 }
 
@@ -117,16 +118,19 @@ body {
   .cardWord {
     @include common-text;
     color: $black;
+    height: 18px;
   }
 
   .cardTranscription {
     @include small-text;
     color: $grey-text;
+    height: 18px;
   }
 
   .cardTranslation {
     @include small-text;
     color: $green;
+    height: 18px;
   }
 }
 

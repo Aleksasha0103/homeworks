@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/styles.scss";
-import VocabularyHandling from "./VocabularyHandling";
+import VocabularyHandling from "../cardComponents/VocabularyHandling";
 
 function WordsList() {
   const [vocabulary, setVocabulary] = useState([]);

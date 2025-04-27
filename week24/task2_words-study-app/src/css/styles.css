@@ -132,9 +132,10 @@ body {
 
 .cardContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 40px 0px;
 }
 
@@ -163,18 +164,21 @@ body {
   font-size: 17px;
   color: #5c5150;
   color: #313030;
+  height: 18px;
 }
 .card .cardTranscription {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
   color: #5c5150;
   color: #5c5150;
+  height: 18px;
 }
 .card .cardTranslation {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
   color: #5c5150;
   color: #53b75b;
+  height: 18px;
 }
 
 .buttonCardCheckTranslation {
