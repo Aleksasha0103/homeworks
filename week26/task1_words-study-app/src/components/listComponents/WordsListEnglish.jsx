@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/styles.scss";
 import VocabularyHandling from "../cardComponents/VocabularyHandling";
 
-function WordsListElglish() {
+function WordsListEnglish() {
   const [vocabulary, setVocabulary] = useState([]);
   const [editingIndex, setEditingIndex] = useState(null);
   const [newWord, setNewWord] = useState({ english: "", transcription: "", russian: "", tags: "" });
@@ -168,4 +168,4 @@ function WordsListElglish() {
   );
 }
 
-export default WordsListElglish;
+export default WordsListEnglish;

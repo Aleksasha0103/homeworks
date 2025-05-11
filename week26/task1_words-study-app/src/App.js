@@ -1,12 +1,11 @@
-import React from "react";
+import "./styles/styles.scss";
+import React, { lazy, Suspense } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import WordsListElglish from "./components/listComponents/WordsListEnglish";
-import CardsContainer from "./components/cardComponents/CardsContainer";
-import Error404 from "./components/common/Error404";
-import "./styles/styles.scss";
+import { appRoutes } from "./appRoutes";
+import ErrorBoundary from "./components/common/ErrorBoundary";
 
 function App() {
   return (
@@ -14,11 +13,15 @@ function App() {
       <BrowserRouter>
         <Header />
         <div className="main-content-container">
-          <Routes>
-            <Route path="/" element={<WordsListElglish />} />
-            <Route path="/game" element={<CardsContainer />} />
-            <Route path="*" element={<Error404 />} />
-          </Routes>
+          <Suspense fallback={<div>Loading...</div>}>
+            <ErrorBoundary>
+              <Routes>
+                {appRoutes.map((route, index) => (
+                  <Route key={index} path={route.path} element={route.element} />
+                ))}
+              </Routes>
+            </ErrorBoundary>
+          </Suspense>
         </div>
         <Footer />
       </BrowserRouter>
