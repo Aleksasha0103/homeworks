@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { fetchVocabularyEnglish } from "../../data/vocabularyEnglish";
 import CardItem from "./CardItem";
 import LanguageChoice from "../common/LanguageChoice";
 import WordsHandlingButtons from "./WordsHandlingButtons";
@@ -13,6 +12,8 @@ function CardsContainer() {
   const [chooseLanguage, setChooseLanguage] = useState(null);
   const showCounter = chooseLanguage === "Английский" && vocabulary.length > 0;
   const makeButtonActive = vocabulary.length > 0;
+
+  const isEmpty = chooseLanguage && vocabulary.length === 0;
 
   const isFirstCard = currentCardIndex === 0;
   const isLastCard = currentCardIndex === Math.max(vocabulary.length - 1, 0);
@@ -37,22 +38,6 @@ function CardsContainer() {
   };
 
   useEffect(() => {
-    const loadVocabularyData = async (language) => {
-      try {
-        const vocabularyData = await fetchVocabularyEnglish();
-        setVocabulary(vocabularyData);
-      } catch (error) {
-        console.error("Failed to load vocabulary:", error);
-        setVocabulary([]);
-      }
-    };
-
-    if (chooseLanguage) {
-      loadVocabularyData(chooseLanguage);
-    }
-  }, [chooseLanguage]);
-
-  useEffect(() => {
     if (animationDirection) {
       const timeout = setTimeout(() => setAnimationDirection(null), 300);
       return () => clearTimeout(timeout);
@@ -61,34 +46,28 @@ function CardsContainer() {
 
   return (
     <>
-      <LanguageChoice setChooseLanguage={setChooseLanguage} />
+      <LanguageChoice setVocabulary={setVocabulary} setChooseLanguage={setChooseLanguage} />
       <div className="commonCardsContainer">
         <div className="horizontalCommonCardsContainer">
-          <div className="horizontalCommonCardsContainer">
-            <button
-              className={`prevCardButton ${makeButtonActive ? "activeButton" : ""} ${
-                isFirstCard ? "inactiveButton" : ""
-              }`}
-              onClick={slideCardPrev}
-            ></button>
-          </div>
-          <div className={`animationContainer slide-${animationDirection}`}>
+          <button
+            className={`prevCardButton ${makeButtonActive ? "activeButton" : ""} ${
+              isFirstCard ? "inactiveButton" : ""
+            }`}
+            onClick={slideCardPrev}
+          ></button>
+          <div className="animationContainer">
             <CardItem
               randomWord={currentCard}
               buttonCardPressed={buttonCardPressed}
               setButtonCardPressed={setButtonCardPressed}
-              vocabulary={vocabulary}
-              chooseLanguage={chooseLanguage}
+              animationDirection={animationDirection}
+              isEmpty={isEmpty}
             />
           </div>
-          <div className="horizontalCommonCardsContainer">
-            <button
-              className={`nextCardButton ${makeButtonActive ? "activeButton" : ""} ${
-                isLastCard ? "inactiveButton" : ""
-              }`}
-              onClick={slideCardNext}
-            ></button>
-          </div>
+          <button
+            className={`nextCardButton ${makeButtonActive ? "activeButton" : ""} ${isLastCard ? "inactiveButton" : ""}`}
+            onClick={slideCardNext}
+          ></button>
         </div>
         {showCounter ? <div className="arrayCounter">{arrayCounter}</div> : <div className="arrayCounter"></div>}
       </div>

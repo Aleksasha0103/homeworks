@@ -6,8 +6,13 @@ import "../../styles/styles.scss";
 function VocabularyHandling({ setVocabulary }) {
   useEffect(() => {
     const vocabularyInitial = async () => {
-      const vocabularyData = await fetchVocabularyEnglish();
-      setVocabulary(vocabularyData);
+      try {
+        const vocabularyData = await fetchVocabularyEnglish();
+        setVocabulary(vocabularyData);
+      } catch (error) {
+        console.error("Failed to load vocabulary: ", error);
+        setVocabulary([]);
+      }
     };
 
     vocabularyInitial();

@@ -1,10 +1,23 @@
 import React from "react";
 import languagesList from "../../data/languages";
+import { fetchVocabularyEnglish } from "../../data/vocabularyEnglish";
 import "../../styles/styles.scss";
 
-function LanguageChoice({ setChooseLanguage }) {
-  const chosenLanguageWord = (language) => {
+function LanguageChoice({ setVocabulary, setChooseLanguage }) {
+  const chosenLanguageWord = async (language) => {
     setChooseLanguage(language);
+
+    if (language === "Английский") {
+      try {
+        const englishVocabulary = await fetchVocabularyEnglish();
+        setVocabulary(englishVocabulary);
+      } catch (error) {
+        console.error("Failed to load vocabulary: ", error);
+        setVocabulary([]);
+      }
+    } else {
+      setVocabulary([]);
+    }
   };
 
   return (

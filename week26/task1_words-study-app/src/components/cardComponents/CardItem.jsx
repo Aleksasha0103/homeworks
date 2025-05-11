@@ -1,12 +1,12 @@
 import React from "react";
 import "../../styles/styles.scss";
 
-function CardItem({ randomWord, buttonCardPressed, setButtonCardPressed, vocabulary, chooseLanguage }) {
+function CardItem({ randomWord, buttonCardPressed, setButtonCardPressed, isEmpty, animationDirection }) {
   return (
     <>
-      <div className="cardContainer">
+      <div className={`cardContainer ${animationDirection ? `slide-${animationDirection}` : ""}`}>
         <div className="card">
-          {chooseLanguage && vocabulary.length === 0 ? (
+          {isEmpty ? (
             <p className="cardWord">Список слов пуст или отсутствует</p>
           ) : randomWord ? (
             <>
@@ -15,7 +15,7 @@ function CardItem({ randomWord, buttonCardPressed, setButtonCardPressed, vocabul
               {buttonCardPressed ? (
                 <p className="cardTranslation">{randomWord.russian}</p>
               ) : (
-                <p className="cardTranslation"></p>
+                <p className="cardTranslation" aria-hidden="true" style={{ visibility: "hidden" }}></p>
               )}
               <button className="buttonCardCheckTranslation" onClick={() => setButtonCardPressed((prev) => !prev)}>
                 {buttonCardPressed ? "Назад" : "Проверить"}
