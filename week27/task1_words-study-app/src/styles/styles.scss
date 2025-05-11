@@ -1,0 +1,725 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin buttons-icons {
+  @include button-icon;
+  @include shadows-icons;
+  display: inline-flex;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+body {
+  padding: 0px 20px;
+  margin: 0;
+}
+
+.commonParagraph {
+  margin: 2px 0 0 0;
+}
+
+//Хедер
+.headerBlock {
+  @include flex-row-wrap;
+  justify-content: left;
+  margin-bottom: 20px;
+  gap: 30px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: $beige;
+  padding: 20px 0;
+}
+
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.titleH1 {
+  @include titleH1-text;
+  margin: 0 auto;
+}
+
+.headerButtonsContainer {
+  margin-left: 0 auto 0;
+}
+
+.headerButton {
+  @include button-header;
+  @include common-text;
+  @include shadows;
+  background-color: $green;
+  color: $white;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+//Главное меню
+.main-menu {
+  @include flex-row-wrap;
+  @include main-menu-text;
+  justify-content: left;
+  align-items: center;
+
+  ul {
+    @include flex-row-wrap;
+    justify-content: space-between;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0px;
+
+    li {
+      @include main-menu-items-size;
+      @include flex-row-wrap;
+      @include shadows;
+      align-items: center;
+      justify-content: center;
+      background-color: $green;
+    }
+  }
+}
+
+//Главный контейнер для контента
+.main-content-container {
+  @include flex-column-wrap;
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+// Выбор языка и контейнер карточек
+.LanguageChoiceContainer,
+.WordsHandlingButtonsContainer,
+.commonCardsContainer,
+.horizontalCommonCardsContainer,
+.animationContainer,
+.WordsHandlingDivsContainer {
+  @include flex-row-wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.WordsHandlingDivsContainer {
+  width: 70vh;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.commonCardsContainer {
+  @include flex-column-wrap;
+}
+
+.languageChoiceButton {
+  @include language-choice-button;
+  @include common-text;
+  @include shadows;
+  border: none;
+  cursor: pointer;
+  background-color: $light-blue;
+  color: $black;
+}
+
+.prevCardButton,
+.nextCardButton,
+.inactiveButton {
+  @include prev-next-buttons;
+  @include common-text;
+  @include shadows;
+  border: none;
+  background-color: $light-blue;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+.inactiveButton {
+  background-color: $light-grey;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 4px 1px $grey-text;
+  }
+}
+
+.prevCardButton {
+  background-image: url("../assets/images/icon-arrow-left.svg");
+}
+
+.nextCardButton {
+  background-image: url("../assets/images/icon-arrow-right.svg");
+}
+
+.arrayCounter {
+  font-size: 16px;
+  color: $black;
+  margin: 0px auto 20px;
+  height: 20px;
+}
+
+// Карточка
+.cardContainer {
+  @include flex-column-wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 10px;
+  width: 500px;
+  flex-shrink: 0;
+  transition: transform 0.6s linear;
+}
+
+.card {
+  @include flex-column-wrap;
+  @include card-item;
+  @include common-text;
+  @include shadows-large;
+  background-color: $white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .cardWord {
+    @include common-text;
+    color: $black;
+    height: 18px;
+  }
+
+  .cardTranscription {
+    @include small-text;
+    color: $grey-text;
+    height: 18px;
+  }
+
+  .cardTranslation {
+    @include small-text;
+    color: $green;
+    height: 18px;
+  }
+}
+
+.buttonCardCheckTranslation {
+  @include button-icon-long;
+  @include shadows-icons;
+  background-color: $green;
+  color: $white;
+  margin-top: 10px;
+  border: none;
+}
+
+.knownWords,
+.unknownWords,
+.allWords {
+  @include common-text;
+  width: 30%;
+}
+
+.unknownWordsButton,
+.knownWordsButton,
+.allWordsButton {
+  @include language-action-button;
+  @include common-text;
+  @include shadows;
+  border: none;
+  cursor: pointer;
+  color: $white;
+}
+
+.knownWordsButton {
+  background-color: $green;
+}
+
+.unknownWordsButton {
+  background-color: $red;
+}
+
+.allWordsButton {
+  @include button-long;
+  background-color: $light-blue;
+  color: $black;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.slide-left {
+  animation: slide-left 0.3s ease-in-out;
+}
+
+.slide-right {
+  animation: slide-right 0.3s ease-in-out;
+}
+
+// Список слов
+.wordsListTable {
+  width: 90%;
+  background-color: $white;
+  border-collapse: collapse;
+  margin: 30px auto;
+
+  th,
+  td {
+    border: 1px solid $grey-text;
+    padding: 5px 5px;
+  }
+
+  td {
+    text-align: left;
+    width: 19.5%;
+  }
+
+  td:first-child {
+    width: 3%;
+  }
+
+  td:last-child {
+    width: 18%;
+    text-align: right;
+  }
+
+  input {
+    border: none;
+  }
+}
+
+.rosy {
+  background-color: $rosy;
+}
+
+.white {
+  background-color: $white;
+}
+
+.buttonSave,
+.buttonCancel,
+.buttonAddNewWord {
+  @include buttons-icons;
+  @include button-icon-long;
+  background-color: $green;
+  background-image: url("../assets/images/icon-check.svg");
+  color: $white;
+  padding-left: 33px;
+  background-position: 10px;
+}
+
+.buttonCancel {
+  background-color: $red;
+  background-image: url("../assets/images/icon-cancel.svg");
+}
+
+.buttonEdit {
+  @include buttons-icons;
+  background-color: $orange;
+  background-image: url("../assets/images/icon-pencil.svg");
+}
+
+.buttonDelete {
+  @include buttons-icons;
+  background-color: $red;
+  background-image: url("../assets/images/icon-trash.svg");
+  margin-right: 0px;
+}
+
+.buttonAddNewWord {
+  background-image: none;
+  margin-right: 0px;
+  padding: 5px;
+  justify-content: center;
+}
+
+//Футер
+.footerBlock {
+  @include flex-column-wrap;
+  justify-content: center;
+  margin: 90px 0 20px;
+}
+
+//Ошибка 404
+.img404Container {
+  @include flex-column-wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  object-fit: contain;
+}
+
+.img404 {
+  object-fit: contain;
+}
+
+.text404 {
+  @include text404;
+}
+
+.animation404Container {
+  position: relative;
+  width: 40%;
+  height: 100px;
+}
+
+.letter {
+  position: absolute;
+  animation: floatB 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Разные позиции и задержки */
+.letterB {
+  top: 10%;
+  left: 15%;
+  animation: floatB 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterC {
+  top: 30%;
+  left: 28%;
+  animation: floatC 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterSamurai {
+  top: 55%;
+  left: 15%;
+  animation: floatSamurai 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterCh {
+  top: 20%;
+  left: 45%;
+  animation: floatCh 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterH {
+  top: 10%;
+  left: 60%;
+  animation: floatH 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterI {
+  top: 70%;
+  left: 65%;
+  animation: floatI 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterK {
+  top: 45%;
+  left: 25%;
+  animation: floatK 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterN {
+  top: 50%;
+  left: 38%;
+  animation: floatN 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterO {
+  top: 78%;
+  left: 12%;
+  animation: floatO 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterLove {
+  top: 75%;
+  left: 67%;
+  animation: floatLove 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterP {
+  top: 65%;
+  left: 32%;
+  animation: floatP 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterT {
+  top: 35%;
+  left: 53%;
+  animation: floatT 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.letterY {
+  top: 55%;
+  left: 78%;
+  animation: floatY 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Анимации для каждой буквы с уменьшенными отклонениями и равномерной скоростью */
+@keyframes floatB {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(15px, -20px);
+  }
+  50% {
+    transform: translate(-20px, 10px);
+  }
+  75% {
+    transform: translate(30px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatC {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10px, -15px);
+  }
+  50% {
+    transform: translate(20px, 30px);
+  }
+  75% {
+    transform: translate(-40px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatSamurai {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20px, -30px);
+  }
+  50% {
+    transform: translate(10px, 15px);
+  }
+  75% {
+    transform: translate(-40px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatCh {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(25px, -15px);
+  }
+  50% {
+    transform: translate(-30px, 20px);
+  }
+  75% {
+    transform: translate(15px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatH {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-40px, 20px);
+  }
+  50% {
+    transform: translate(30px, -20px);
+  }
+  75% {
+    transform: translate(-20px, 40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatI {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 40px);
+  }
+  50% {
+    transform: translate(-30px, 20px);
+  }
+  75% {
+    transform: translate(20px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatK {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(25px, -30px);
+  }
+  50% {
+    transform: translate(-15px, 10px);
+  }
+  75% {
+    transform: translate(35px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatN {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-25px, 15px);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+  75% {
+    transform: translate(40px, 25px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatO {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(15px, 10px);
+  }
+  50% {
+    transform: translate(-30px, 25px);
+  }
+  75% {
+    transform: translate(10px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatLove {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20px, 40px);
+  }
+  50% {
+    transform: translate(30px, -10px);
+  }
+  75% {
+    transform: translate(-25px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatP {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30px, 20px);
+  }
+  50% {
+    transform: translate(-20px, -10px);
+  }
+  75% {
+    transform: translate(40px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatT {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20px, -30px);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
+  75% {
+    transform: translate(-25px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatY {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-30px, 25px);
+  }
+  50% {
+    transform: translate(40px, -20px);
+  }
+  75% {
+    transform: translate(-25px, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
