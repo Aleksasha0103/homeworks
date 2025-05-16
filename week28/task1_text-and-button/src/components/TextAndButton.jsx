@@ -11,7 +11,7 @@ function TextAndButton() {
 
   const putfinalText = (e) => {
     e.preventDefault();
-    setfinalText(text);
+    setfinalText(text.toUpperCase());
     setText("");
   };
 
@@ -22,7 +22,7 @@ function TextAndButton() {
         <button type="submit" onClick={putfinalText}>
           Записать
         </button>
-        <div className="text-paragraph">{finalText}</div>
+        <div className="text-paragraph green">{finalText}</div>
       </form>
     </>
   );
