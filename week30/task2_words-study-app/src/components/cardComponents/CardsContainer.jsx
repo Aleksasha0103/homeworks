@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { fetchVocabularyEnglish } from "../../data/vocabularyEnglish";
-import CardItem from "../cardComponents/CardItem";
+import CardItem from "./CardItem";
+import LanguageChoice from "../common/LanguageChoice";
+import WordsHandlingButtons from "./WordsHandlingButtons";
+import useLocalStorage from "../common/useLocalStorage";
 import "../../styles/styles.scss";
 
-function CardsContainer({ chooseLanguage }) {
+function CardsContainer() {
   const [vocabulary, setVocabulary] = useState([]);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [buttonCardPressed, setButtonCardPressed] = useState(false);
   const [animationDirection, setAnimationDirection] = useState(null);
+  const [chooseLanguage, setChooseLanguage] = useState(null);
   const showCounter = chooseLanguage === "Английский" && vocabulary.length > 0;
   const makeButtonActive = vocabulary.length > 0;
+
+  const isEmpty = chooseLanguage && vocabulary.length === 0;
 
   const isFirstCard = currentCardIndex === 0;
   const isLastCard = currentCardIndex === Math.max(vocabulary.length - 1, 0);
@@ -34,31 +39,19 @@ function CardsContainer({ chooseLanguage }) {
   };
 
   useEffect(() => {
-    const loadVocabularyData = async (language) => {
-      try {
-        const vocabularyData = await fetchVocabularyEnglish();
-        setVocabulary(vocabularyData);
-      } catch (error) {
-        console.error("Failed to load vocabulary:", error);
-        setVocabulary([]);
-      }
-    };
-
-    if (chooseLanguage) {
-      loadVocabularyData(chooseLanguage);
-    }
-  }, [chooseLanguage]);
-
-  useEffect(() => {
     if (animationDirection) {
       const timeout = setTimeout(() => setAnimationDirection(null), 300);
       return () => clearTimeout(timeout);
     }
   }, [animationDirection]);
 
+  const [countStudiedWords, setCountStudiedWords] = useLocalStorage("localCount", 0);
+  const [studiedWords, setStudiedWords] = useLocalStorage("studiedWords", []);
+
   return (
-    <div className="commonCardsContainer">
-      <div className="horizontalCommonCardsContainer">
+    <>
+      <LanguageChoice setVocabulary={setVocabulary} setChooseLanguage={setChooseLanguage} />
+      <div className="commonCardsContainer">
         <div className="horizontalCommonCardsContainer">
           <button
             className={`prevCardButton ${makeButtonActive ? "activeButton" : ""} ${
@@ -66,25 +59,35 @@ function CardsContainer({ chooseLanguage }) {
             }`}
             onClick={slideCardPrev}
           ></button>
-        </div>
-        <div className={`animationContainer slide-${animationDirection}`}>
-          <CardItem
-            randomWord={currentCard}
-            buttonCardPressed={buttonCardPressed}
-            setButtonCardPressed={setButtonCardPressed}
-            vocabulary={vocabulary}
-            chooseLanguage={chooseLanguage}
-          />
-        </div>
-        <div className="horizontalCommonCardsContainer">
+          <div className="animationContainer">
+            <CardItem
+              randomWord={currentCard}
+              buttonCardPressed={buttonCardPressed}
+              setButtonCardPressed={setButtonCardPressed}
+              animationDirection={animationDirection}
+              isEmpty={isEmpty}
+              countStudiedWords={countStudiedWords}
+              setCountStudiedWords={setCountStudiedWords}
+              studiedWords={studiedWords}
+              setStudiedWords={setStudiedWords}
+            />
+          </div>
           <button
             className={`nextCardButton ${makeButtonActive ? "activeButton" : ""} ${isLastCard ? "inactiveButton" : ""}`}
             onClick={slideCardNext}
           ></button>
         </div>
+        {showCounter ? <div className="arrayCounter">{arrayCounter}</div> : <div className="arrayCounter"></div>}
       </div>
-      {showCounter ? <div className="arrayCounter">{arrayCounter}</div> : <div className="arrayCounter"></div>}
-    </div>
+      <WordsHandlingButtons
+        unknownWordsButton={() => {}}
+        allWordsButton={() => {}}
+        knownWordsButton={() => {}}
+        vocabulary={vocabulary}
+        countStudiedWords={countStudiedWords}
+        chooseLanguage={chooseLanguage}
+      />
+    </>
   );
 }
 
