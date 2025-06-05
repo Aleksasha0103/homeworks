@@ -1,22 +1,22 @@
 import React from "react";
 import languagesList from "../../data/languages";
-import { fetchVocabularyEnglish } from "../../data/vocabularyEnglish";
+import { useWordsStore } from "../../data/WordsListProvider";
 import "../../styles/styles.scss";
 
-function LanguageChoice({ setVocabulary, setChooseLanguage }) {
+function LanguageChoice({ setChooseLanguage }) {
+  const wordsStore = useWordsStore();
   const chosenLanguageWord = async (language) => {
     setChooseLanguage(language);
 
     if (language === "Английский") {
       try {
-        const englishVocabulary = await fetchVocabularyEnglish();
-        setVocabulary(englishVocabulary);
+        await wordsStore.loadVocabulary(language);
       } catch (error) {
-        console.error("Failed to load vocabulary: ", error);
-        setVocabulary([]);
+        console.error("Ошибка при загрузке списка слов: ", error);
+        wordsStore.setWords([]);
       }
     } else {
-      setVocabulary([]);
+      wordsStore.setWords([]);
     }
   };
 

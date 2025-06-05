@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { observer } from "mobx-react-lite";
+import { useWordsStore } from "../../data/WordsListProvider";
 import "../../styles/styles.scss";
-import VocabularyHandling from "../cardComponents/VocabularyHandling";
 
-function WordsListEnglish() {
-  const [vocabulary, setVocabulary] = useState([]);
+const WordsListEnglish = observer(() => {
+  const wordsStore = useWordsStore();
+  const vocabulary = wordsStore.wordsCollection;
   const [editingIndex, setEditingIndex] = useState(null);
   const [newWord, setNewWord] = useState({ english: "", transcription: "", russian: "", tags: "" });
   const nextId = vocabulary.length + 1;
@@ -15,28 +17,24 @@ function WordsListEnglish() {
 
   //Изменение данных в инпуте (ввод)
   const handleInputChange = (index, field, value) => {
-    const updatedInput = [...vocabulary];
-    updatedInput[index][field] = value;
-    setVocabulary(updatedInput);
+    const updatedWord = { ...vocabulary[index], [field]: value };
+    wordsStore.updateWordInCollection(index, updatedWord);
   };
 
   //Сохранение обновлённого инпута (update)
   const handleSaving = (index) => {
-    const updatedInput = [...vocabulary];
-    setVocabulary(updatedInput);
     setEditingIndex(null);
   };
 
   //Удаление строки со словом
   const handleDeleting = (index) => {
-    const updatedVocabulary = [...vocabulary];
-    updatedVocabulary.splice(index, 1);
-    setVocabulary(updatedVocabulary);
+    wordsStore.deleteWordFromCollection(index);
   };
 
   //Добавление нового слова
   const handleAddingNewWord = () => {
-    setVocabulary([...vocabulary, { id: nextId, ...newWord }]);
+    const newWordWithId = { id: nextId, ...newWord };
+    wordsStore.addWordToCollection(newWordWithId);
     setNewWord({ english: "", transcription: "", russian: "", tags: "" });
     setEditingIndex(null);
   };
@@ -60,7 +58,6 @@ function WordsListEnglish() {
 
   return (
     <section className="wordsList">
-      <VocabularyHandling setVocabulary={setVocabulary} />
       <table className="wordsListTable">
         <thead>
           <tr>
@@ -240,8 +237,6 @@ function WordsListEnglish() {
                     onClick={() => {
                       if (editingIndex !== nextId) {
                         setEditingIndex(nextId);
-                      } else {
-                        handleInputChange(nextId);
                       }
                     }}
                   >
@@ -255,6 +250,6 @@ function WordsListEnglish() {
       </table>
     </section>
   );
-}
+});
 
 export default WordsListEnglish;

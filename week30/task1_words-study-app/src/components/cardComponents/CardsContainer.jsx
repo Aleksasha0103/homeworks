@@ -3,10 +3,13 @@ import CardItem from "./CardItem";
 import LanguageChoice from "../common/LanguageChoice";
 import WordsHandlingButtons from "./WordsHandlingButtons";
 import useLocalStorage from "../common/useLocalStorage";
+import { observer } from "mobx-react-lite";
+import { useWordsStore } from "../../data/WordsListProvider";
 import "../../styles/styles.scss";
 
-function CardsContainer() {
-  const [vocabulary, setVocabulary] = useState([]);
+const CardsContainer = observer(() => {
+  const wordsStore = useWordsStore();
+  const vocabulary = wordsStore.wordsCollection;
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [buttonCardPressed, setButtonCardPressed] = useState(false);
   const [animationDirection, setAnimationDirection] = useState(null);
@@ -39,6 +42,10 @@ function CardsContainer() {
   };
 
   useEffect(() => {
+    setButtonCardPressed(false);
+  }, [currentCardIndex]);
+
+  useEffect(() => {
     if (animationDirection) {
       const timeout = setTimeout(() => setAnimationDirection(null), 300);
       return () => clearTimeout(timeout);
@@ -50,7 +57,7 @@ function CardsContainer() {
 
   return (
     <>
-      <LanguageChoice setVocabulary={setVocabulary} setChooseLanguage={setChooseLanguage} />
+      <LanguageChoice setChooseLanguage={setChooseLanguage} />
       <div className="commonCardsContainer">
         <div className="horizontalCommonCardsContainer">
           <button
@@ -89,6 +96,6 @@ function CardsContainer() {
       />
     </>
   );
-}
+});
 
 export default CardsContainer;
