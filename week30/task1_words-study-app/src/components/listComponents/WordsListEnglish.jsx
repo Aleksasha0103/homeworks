@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useWordsStore } from "../../data/WordsListProvider";
 import "../../styles/styles.scss";
@@ -9,6 +9,10 @@ const WordsListEnglish = observer(() => {
   const [editingIndex, setEditingIndex] = useState(null);
   const [newWord, setNewWord] = useState({ english: "", transcription: "", russian: "", tags: "" });
   const nextId = vocabulary.length + 1;
+
+  useEffect(() => {
+    wordsStore.loadVocabulary("Английский");
+  }, []);
 
   //Редактирование строки (при клике по кнопке)
   const handleEditing = (index) => {
@@ -33,8 +37,7 @@ const WordsListEnglish = observer(() => {
 
   //Добавление нового слова
   const handleAddingNewWord = () => {
-    const newWordWithId = { id: nextId, ...newWord };
-    wordsStore.addWordToCollection(newWordWithId);
+    wordsStore.addWordToCollection(newWord);
     setNewWord({ english: "", transcription: "", russian: "", tags: "" });
     setEditingIndex(null);
   };

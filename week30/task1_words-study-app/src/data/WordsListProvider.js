@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import React, { createContext, useContext } from "react";
 import { useLocalObservable } from "mobx-react-lite";
 import { action, runInAction } from "mobx";
 
@@ -16,9 +16,7 @@ const WordsListProvider = ({ children }) => {
 
     loadVocabulary: action(async function (language) {
       if (language !== "Английский") {
-        runInAction(() => {
-          this.vocabularyEnglish = [];
-        });
+        this.vocabularyEnglish = [];
         return;
       }
       try {
@@ -29,132 +27,17 @@ const WordsListProvider = ({ children }) => {
         const dataVocabulary = await responseVocabularyEnglish.json();
         runInAction(() => {
           this.vocabularyEnglish = dataVocabulary;
+          localStorage.setItem("words_local", JSON.stringify(dataVocabulary));
         });
       } catch (error) {
-        runInAction(() => {
-          this.vocabularyEnglish = [
-            {
-              id: "33152",
-              english: "Thunderstorm",
-              transcription: "[ ˈθʌndərstɔːrm ]",
-              russian: "Гроза",
-              tags: "Weather",
-              tags_json: '["Weather"]',
-            },
-            {
-              id: "33153",
-              english: "curious",
-              transcription: "[ ˈkjʊrɪəs ]",
-              russian: "любопытный",
-              tags: "emotions",
-              tags_json: '["emotions"]',
-            },
-            {
-              id: "33157",
-              english: "Sister",
-              transcription: "|ˈsɪstər|",
-              russian: "Сестра",
-              tags: "Family",
-              tags_json: '["Family"]',
-            },
-            {
-              id: "33158",
-              english: "Brother",
-              transcription: "|ˈbrʌðər",
-              russian: "Брат",
-              tags: "Family",
-              tags_json: '["Family"]',
-            },
-            {
-              id: "33183",
-              english: "rainbow",
-              transcription: "[ˈreɪnbəʊ]",
-              russian: "радуга",
-              tags: "weather",
-              tags_json: '["weather"]',
-            },
-            {
-              id: "33198",
-              english: "Mother",
-              transcription: "[mʌðə]",
-              russian: "Мама",
-              tags: "Family",
-              tags_json: '["Family"]',
-            },
-            {
-              id: "33200",
-              english: "Aunt",
-              transcription: "[ænt]",
-              russian: "Тётя",
-              tags: "Family",
-              tags_json: '["Family"]',
-            },
-            {
-              id: "33208",
-              english: "peace",
-              transcription: "/piːs/",
-              russian: "мир",
-              tags: "",
-              tags_json: '[""]',
-            },
-            {
-              id: "33209",
-              english: "overwhelming",
-              transcription: "/əʊvərˈwelmɪŋ/",
-              russian: "ошеломляющий",
-              tags: "",
-              tags_json: '[""]',
-            },
-            {
-              id: "33211",
-              english: "forecast",
-              transcription: "/ˈfɔːrkæst/",
-              russian: "прогноз",
-              tags: "",
-              tags_json: '[""]',
-            },
-            {
-              id: "33229",
-              english: "mosquito",
-              transcription: "/məˈskiː.təʊ/",
-              russian: "комар",
-              tags: "",
-              tags_json: '[""]',
-            },
-            {
-              id: "33250",
-              english: "tornado",
-              transcription: "/tɔːˈneɪ.dəʊ/",
-              russian: "торнадо",
-              tags: "weather",
-              tags_json: '["weather"]',
-            },
-            {
-              id: "33317",
-              english: "scrooge",
-              transcription: "/skruːdʒ/",
-              russian: "скряга",
-              tags: "",
-              tags_json: '[""]',
-            },
-            {
-              id: "33367",
-              english: "cat",
-              transcription: "[cæt]",
-              russian: "кот",
-              tags: "",
-              tags_json: '[""]',
-            },
-            {
-              id: "33390",
-              english: "hang out",
-              transcription: "|ˈhæŋ ˈaʊt|",
-              russian: "тусоваться",
-              tags: "",
-              tags_json: '[""]',
-            },
-          ];
-        });
+        const savedWords = localStorage.getItem("words_local");
+        if (savedWords) {
+          runInAction(() => {
+            this.vocabularyEnglish = JSON.parse(savedWords);
+          });
+        } else {
+          alert("Не удалось загрузить данные");
+        }
       }
     }),
 
@@ -162,19 +45,77 @@ const WordsListProvider = ({ children }) => {
       this.vocabularyEnglish = words;
     }),
 
-    addWordToCollection: action(function (word) {
-      this.vocabularyEnglish.push(word);
-    }),
+    addWordToCollection: action(async function (word) {
+      try {
+        const response = await fetch("https://itgirlschool.justmakeit.ru/api/words", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(word),
+        });
+        if (!response.ok) {
+          throw new Error(`Ошибка сохранения: ${response.status}`);
+        }
+        const newWord = await response.json();
 
-    updateWordInCollection: action(function (index, updateWord) {
-      if (index >= 0 && index < this.vocabularyEnglish.length) {
-        this.vocabularyEnglish[index] = updateWord;
+        if (!newWord.id) {
+          alert("Сервер не вернул id");
+          return;
+        }
+
+        runInAction(() => {
+          this.vocabularyEnglish.push(newWord);
+          localStorage.setItem("words_local", JSON.stringify(this.vocabularyEnglish));
+        });
+      } catch (error) {
+        alert(`Не удалось сохранить слово: ${error.message}`);
       }
     }),
 
-    deleteWordFromCollection: action(function (index) {
-      if (index >= 0 && index < this.vocabularyEnglish.length) {
-        this.vocabularyEnglish.splice(index, 1);
+    updateWordInCollection: action(async function (index, updateWord) {
+      const oldWord = this.vocabularyEnglish[index];
+      if (!oldWord || !oldWord.id) return;
+
+      try {
+        const response = await fetch(`https://itgirlschool.justmakeit.ru/api/words/${oldWord.id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updateWord),
+        });
+
+        if (!response.ok) {
+          alert("Ошибка при обновлении");
+          return;
+        }
+
+        runInAction(() => {
+          this.vocabularyEnglish[index] = updateWord;
+          localStorage.setItem("words_local", JSON.stringify(this.vocabularyEnglish));
+        });
+      } catch (error) {
+        alert(`Не удалось обновить слово: ${error.message}`);
+      }
+    }),
+
+    deleteWordFromCollection: action(async function (index) {
+      const deletedWord = this.vocabularyEnglish[index];
+      if (!deletedWord || !deletedWord.id) return;
+
+      try {
+        const response = await fetch(`https://itgirlschool.justmakeit.ru/api/words/${deletedWord.id}`, {
+          method: "DELETE",
+        });
+
+        if (!response.ok) {
+          alert("Ошибка при удалении");
+          return;
+        }
+
+        runInAction(() => {
+          this.vocabularyEnglish.splice(index, 1);
+          localStorage.setItem("words_local", JSON.stringify(this.vocabularyEnglish));
+        });
+      } catch (error) {
+        alert(`Не удалось удалить слово: ${error.message}`);
       }
     }),
 
